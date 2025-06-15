@@ -1,0 +1,1604 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "MainMenu",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "X": 70,
+            "Width": 100,
+            "Height": 100,
+            "RelativeFilename": "logo_tetris.png"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonNewGame",
+            "X": 13,
+            "Y": 202,
+            "Width": 214,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_rounded_action.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_rounded_action.png",
+            "TextId": "__SingleUse_T0UJ",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonLeaderboard",
+            "X": 13,
+            "Y": 262,
+            "Width": 214,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_rounded_action.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_rounded_action.png",
+            "TextId": "__SingleUse_V9K9",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonContinue",
+            "X": 51,
+            "Y": 142,
+            "Width": 138,
+            "Height": 36,
+            "Visible": false,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_rounded_action.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_rounded_action.png",
+            "TextId": "__SingleUse_WRL6",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonNewGame"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "buttonNewGameClicked"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonContinue"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "buttonContinueClicked"
+            }
+          },
+          {
+            "InteractionName": "Interaction3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonLeaderboard"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "LeaderboardScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "GameScreen",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "boxBorder",
+            "Width": 150,
+            "Height": 320,
+            "Color": {
+              "Red": 70,
+              "Green": 68,
+              "Blue": 187
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "gameArea",
+            "X": 5,
+            "Y": 35,
+            "Width": 140,
+            "Height": 280,
+            "Color": {
+              "Red": 70,
+              "Green": 68,
+              "Blue": 118
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonMenu",
+            "X": 5,
+            "Y": 4,
+            "Width": 28,
+            "Height": 28,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "IconReleased": "__generated\\icon_theme_images_navigation_menu_28_28_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_navigation_menu_28_28_E8F6FB.svg.png"
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "levelArea",
+            "X": 190,
+            "Y": 254,
+            "Width": 13,
+            "Height": 20,
+            "TextId": "__SingleUse_0BGG",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "levelText",
+            "X": 166,
+            "Y": 228,
+            "Width": 56,
+            "Height": 12,
+            "TextId": "__SingleUse_P2CN",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "scoreText",
+            "X": 156,
+            "Y": 153,
+            "Width": 80,
+            "Height": 21,
+            "TextId": "__SingleUse_0IVO",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "scoreArea",
+            "X": 150,
+            "Y": 180,
+            "Width": 87,
+            "Height": 19,
+            "TextId": "scoreArea",
+            "TextRotation": "0",
+            "Color": {
+              "Green": 255
+            },
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "nextText",
+            "X": 170,
+            "Y": 40,
+            "Width": 50,
+            "Height": 12,
+            "TextId": "__SingleUse_H6WL",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "nextBox",
+            "X": 163,
+            "Y": 60,
+            "Width": 66,
+            "Height": 66,
+            "BorderColor": {
+              "Red": 255
+            },
+            "BorderSize": 3
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "nextI",
+            "X": 168,
+            "Y": 70,
+            "Width": 56,
+            "Height": 56,
+            "Visible": false,
+            "CustomContainerDefinitionName": "TetrominoI"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "nextO",
+            "X": 168,
+            "Y": 65,
+            "Width": 56,
+            "Height": 56,
+            "Visible": false,
+            "CustomContainerDefinitionName": "TetrominoO"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "nextT",
+            "X": 175,
+            "Y": 65,
+            "Width": 56,
+            "Height": 56,
+            "Visible": false,
+            "CustomContainerDefinitionName": "TetrominoT"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "nextS",
+            "X": 161,
+            "Y": 65,
+            "Width": 56,
+            "Height": 56,
+            "Visible": false,
+            "CustomContainerDefinitionName": "TetrominoS"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "nextZ",
+            "X": 174,
+            "Y": 65,
+            "Width": 56,
+            "Height": 56,
+            "Visible": false,
+            "CustomContainerDefinitionName": "TetrominoZ"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "nextJ",
+            "X": 175,
+            "Y": 65,
+            "Width": 56,
+            "Height": 56,
+            "Visible": false,
+            "CustomContainerDefinitionName": "TetrominoJ"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "nextL",
+            "X": 161,
+            "Y": 65,
+            "Width": 56,
+            "Height": 56,
+            "Visible": false,
+            "CustomContainerDefinitionName": "TetrominoL"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "menuOverlay",
+            "Width": 240,
+            "Height": 320,
+            "Visible": false,
+            "CustomContainerDefinitionName": "MenuOverlay"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "gameOverScreen",
+            "Width": 240,
+            "Height": 320,
+            "Visible": false,
+            "CustomContainerDefinitionName": "GameOverScreen"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonMenu"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "buttonMenuClicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "HowToPlayScreen",
+        "Components": [
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 65,
+            "Y": 29,
+            "Width": 111,
+            "Height": 20,
+            "TextId": "__SingleUse_VGPF",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea2",
+            "X": 9,
+            "Y": 76,
+            "Width": 218,
+            "Height": 142,
+            "TextId": "__SingleUse_4OO6",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "LineSpacing": 1,
+            "WideTextAction": 1
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabel1",
+            "X": 13,
+            "Y": 234,
+            "Width": 214,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_round_action.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_rounded_action.png",
+            "TextId": "__SingleUse_93Z0",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithLabel1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "GameScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "LeaderboardScreen",
+        "Components": [
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 13,
+            "Y": 24,
+            "Width": 217,
+            "Height": 20,
+            "TextId": "__SingleUse_Z8FB",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "highScore1",
+            "X": 98,
+            "Y": 60,
+            "Width": 45,
+            "Height": 20,
+            "TextId": "__SingleUse_ORZS",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Blue": 1
+            },
+            "AutoSize": true,
+            "Wildcard1": {},
+            "Wildcard2": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "highScore3",
+            "X": 98,
+            "Y": 140,
+            "Width": 45,
+            "Height": 20,
+            "TextId": "__SingleUse_2MJY",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 195
+            },
+            "AutoSize": true,
+            "Wildcard1": {},
+            "Wildcard2": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "highScore4",
+            "X": 98,
+            "Y": 180,
+            "Width": 45,
+            "Height": 20,
+            "TextId": "__SingleUse_CZRL",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 1,
+              "Green": 106,
+              "Blue": 55
+            },
+            "AutoSize": true,
+            "Wildcard1": {},
+            "Wildcard2": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "highScore5",
+            "X": 98,
+            "Y": 221,
+            "Width": 45,
+            "Height": 20,
+            "TextId": "__SingleUse_XSST",
+            "TextRotation": "0",
+            "Color": {
+              "Green": 81,
+              "Blue": 138
+            },
+            "AutoSize": true,
+            "Wildcard1": {},
+            "Wildcard2": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "highScore2",
+            "X": 98,
+            "Y": 100,
+            "Width": 45,
+            "Height": 20,
+            "TextId": "__SingleUse_TS20",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 247,
+              "Green": 104,
+              "Blue": 6
+            },
+            "AutoSize": true,
+            "Wildcard1": {},
+            "Wildcard2": {}
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonMainMenu",
+            "X": 13,
+            "Y": 266,
+            "Width": 214,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_rounded_action.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_rounded_action.png",
+            "TextId": "__SingleUse_ZFND",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonMainMenu"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "MainMenu"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [
+      {
+        "Name": "TetrominoI",
+        "Width": 56,
+        "Height": 56,
+        "Components": [
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box0",
+            "Y": 14,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 83,
+              "Green": 200,
+              "Blue": 216
+            },
+            "BorderColor": {
+              "Red": 159,
+              "Green": 215,
+              "Blue": 228
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box1",
+            "X": 14,
+            "Y": 14,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 83,
+              "Green": 200,
+              "Blue": 216
+            },
+            "BorderColor": {
+              "Red": 159,
+              "Green": 215,
+              "Blue": 228
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box2",
+            "X": 28,
+            "Y": 14,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 83,
+              "Green": 200,
+              "Blue": 216
+            },
+            "BorderColor": {
+              "Red": 159,
+              "Green": 215,
+              "Blue": 228
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box3",
+            "X": 42,
+            "Y": 14,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 83,
+              "Green": 200,
+              "Blue": 216
+            },
+            "BorderColor": {
+              "Red": 159,
+              "Green": 215,
+              "Blue": 228
+            },
+            "BorderSize": 2
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "TetrominoO",
+        "Width": 56,
+        "Height": 56,
+        "Components": [
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box0",
+            "X": 14,
+            "Y": 14,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 239,
+              "Green": 233,
+              "Blue": 33
+            },
+            "BorderColor": {
+              "Red": 219,
+              "Green": 213,
+              "Blue": 87
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box1",
+            "X": 14,
+            "Y": 28,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 239,
+              "Green": 233,
+              "Blue": 33
+            },
+            "BorderColor": {
+              "Red": 219,
+              "Green": 213,
+              "Blue": 87
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box2",
+            "X": 28,
+            "Y": 28,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 239,
+              "Green": 233,
+              "Blue": 33
+            },
+            "BorderColor": {
+              "Red": 219,
+              "Green": 213,
+              "Blue": 87
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box3",
+            "X": 28,
+            "Y": 14,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 239,
+              "Green": 233,
+              "Blue": 33
+            },
+            "BorderColor": {
+              "Red": 219,
+              "Green": 213,
+              "Blue": 87
+            },
+            "BorderSize": 2
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "TetrominoT",
+        "Width": 56,
+        "Height": 56,
+        "Components": [
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box0",
+            "Y": 14,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 167,
+              "Green": 56,
+              "Blue": 148
+            },
+            "BorderColor": {
+              "Red": 204,
+              "Green": 107,
+              "Blue": 149
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box1",
+            "X": 14,
+            "Y": 14,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 167,
+              "Green": 56,
+              "Blue": 148
+            },
+            "BorderColor": {
+              "Red": 204,
+              "Green": 107,
+              "Blue": 149
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box2",
+            "X": 28,
+            "Y": 14,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 167,
+              "Green": 56,
+              "Blue": 148
+            },
+            "BorderColor": {
+              "Red": 204,
+              "Green": 107,
+              "Blue": 149
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box3",
+            "X": 14,
+            "Y": 28,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 167,
+              "Green": 56,
+              "Blue": 148
+            },
+            "BorderColor": {
+              "Red": 204,
+              "Green": 107,
+              "Blue": 149
+            },
+            "BorderSize": 2
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "TetrominoS",
+        "Width": 56,
+        "Height": 56,
+        "Components": [
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box0",
+            "X": 14,
+            "Y": 28,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 238,
+              "Green": 51,
+              "Blue": 46
+            },
+            "BorderColor": {
+              "Red": 220,
+              "Green": 23,
+              "Blue": 28
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box1",
+            "X": 28,
+            "Y": 28,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 238,
+              "Green": 51,
+              "Blue": 46
+            },
+            "BorderColor": {
+              "Red": 220,
+              "Green": 23,
+              "Blue": 28
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box2",
+            "X": 28,
+            "Y": 14,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 238,
+              "Green": 51,
+              "Blue": 46
+            },
+            "BorderColor": {
+              "Red": 220,
+              "Green": 23,
+              "Blue": 28
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box3",
+            "X": 42,
+            "Y": 14,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 238,
+              "Green": 51,
+              "Blue": 46
+            },
+            "BorderColor": {
+              "Red": 220,
+              "Green": 23,
+              "Blue": 28
+            },
+            "BorderSize": 2
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "TetrominoZ",
+        "Width": 56,
+        "Height": 56,
+        "Components": [
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box0",
+            "Y": 14,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 99,
+              "Green": 188,
+              "Blue": 70
+            },
+            "BorderColor": {
+              "Red": 125,
+              "Green": 200,
+              "Blue": 115
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box1",
+            "X": 14,
+            "Y": 14,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 99,
+              "Green": 188,
+              "Blue": 70
+            },
+            "BorderColor": {
+              "Red": 125,
+              "Green": 200,
+              "Blue": 115
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box2",
+            "X": 14,
+            "Y": 28,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 99,
+              "Green": 188,
+              "Blue": 70
+            },
+            "BorderColor": {
+              "Red": 125,
+              "Green": 200,
+              "Blue": 115
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box3",
+            "X": 28,
+            "Y": 28,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 99,
+              "Green": 188,
+              "Blue": 70
+            },
+            "BorderColor": {
+              "Red": 125,
+              "Green": 200,
+              "Blue": 115
+            },
+            "BorderSize": 2
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "TetrominoJ",
+        "Width": 56,
+        "Height": 56,
+        "Components": [
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box0",
+            "Y": 14,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 32,
+              "Green": 85,
+              "Blue": 165
+            },
+            "BorderColor": {
+              "Red": 47,
+              "Green": 95,
+              "Blue": 167
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box1",
+            "Y": 28,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 32,
+              "Green": 85,
+              "Blue": 165
+            },
+            "BorderColor": {
+              "Red": 47,
+              "Green": 95,
+              "Blue": 167
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box2",
+            "X": 14,
+            "Y": 28,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 32,
+              "Green": 85,
+              "Blue": 165
+            },
+            "BorderColor": {
+              "Red": 47,
+              "Green": 95,
+              "Blue": 167
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box3",
+            "X": 28,
+            "Y": 28,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 32,
+              "Green": 85,
+              "Blue": 165
+            },
+            "BorderColor": {
+              "Red": 47,
+              "Green": 95,
+              "Blue": 167
+            },
+            "BorderSize": 2
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "TetrominoL",
+        "Width": 56,
+        "Height": 56,
+        "Components": [
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box0",
+            "X": 14,
+            "Y": 28,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 244,
+              "Green": 116,
+              "Blue": 51
+            },
+            "BorderColor": {
+              "Red": 252,
+              "Green": 149,
+              "Blue": 48
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box1",
+            "X": 28,
+            "Y": 28,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 244,
+              "Green": 116,
+              "Blue": 51
+            },
+            "BorderColor": {
+              "Red": 252,
+              "Green": 149,
+              "Blue": 48
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box2",
+            "X": 42,
+            "Y": 28,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 244,
+              "Green": 116,
+              "Blue": 51
+            },
+            "BorderColor": {
+              "Red": 252,
+              "Green": 149,
+              "Blue": 48
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box3",
+            "X": 42,
+            "Y": 14,
+            "Width": 14,
+            "Height": 14,
+            "Color": {
+              "Red": 244,
+              "Green": 116,
+              "Blue": 51
+            },
+            "BorderColor": {
+              "Red": 252,
+              "Green": 149,
+              "Blue": 48
+            },
+            "BorderSize": 2
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "MenuOverlay",
+        "Width": 240,
+        "Height": 320,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 240,
+            "Height": 320,
+            "Alpha": 140
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 63,
+            "Y": 23,
+            "Width": 120,
+            "Height": 20,
+            "TextId": "__SingleUse_ZPPM",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonResume",
+            "X": 13,
+            "Y": 93,
+            "Width": 214,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_rounded_action.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_rounded_action.png",
+            "TextId": "__SingleUse_RKHJ",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonHowToPlay",
+            "X": 13,
+            "Y": 266,
+            "Width": 214,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_rounded_action.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_rounded_action.png",
+            "TextId": "__SingleUse_N7DX",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonMainMenu",
+            "X": 13,
+            "Y": 194,
+            "Width": 214,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_rounded_action.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_rounded_action.png",
+            "TextId": "__SingleUse_RA26",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonRestart",
+            "X": 13,
+            "Y": 142,
+            "Width": 214,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_rounded_action.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_rounded_action.png",
+            "TextId": "__SingleUse_YY7H",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonResume"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "buttonResumeClicked"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonRestart"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "buttonRestartClicked"
+            }
+          },
+          {
+            "InteractionName": "Interaction3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonHowToPlay"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "HowToPlayScreen"
+            }
+          },
+          {
+            "InteractionName": "Interaction4",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonMainMenu"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "MainMenu"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "GameOverScreen",
+        "Width": 240,
+        "Height": 320,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 240,
+            "Height": 320,
+            "Alpha": 155
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textGameOver",
+            "X": 12,
+            "Y": 16,
+            "Width": 217,
+            "Height": 25,
+            "TextId": "__SingleUse_CHN0",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textScore",
+            "X": 78,
+            "Y": 56,
+            "Width": 85,
+            "Height": 17,
+            "TextId": "__SingleUse_50XG",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "scoreArea",
+            "X": 117,
+            "Y": 86,
+            "Width": 6,
+            "Height": 15,
+            "TextId": "__SingleUse_MXZX",
+            "TextRotation": "0",
+            "Color": {
+              "Green": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textHighScore",
+            "X": 24,
+            "Y": 118,
+            "Width": 176,
+            "Height": 12,
+            "Visible": false,
+            "TextId": "__SingleUse_K97O",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonMainMenu",
+            "X": 70,
+            "Y": 277,
+            "Width": 100,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_tiny_rounded_action.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_tiny_rounded_action.png",
+            "TextId": "__SingleUse_T9P0",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonRestart",
+            "X": 12,
+            "Y": 235,
+            "Width": 100,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_tiny_rounded_action.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_tiny_rounded_action.png",
+            "TextId": "__SingleUse_KOW0",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonLeaderboard",
+            "X": 129,
+            "Y": 235,
+            "Width": 100,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_tiny_rounded_action.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_tiny_rounded_action.png",
+            "TextId": "__SingleUse_DSKW",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "enterName",
+            "Y": 139,
+            "Width": 240,
+            "Height": 180,
+            "Visible": false,
+            "CustomContainerDefinitionName": "EnterName"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonMainMenu"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "MainMenu"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonRestart"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "buttonRestartClicked"
+            }
+          },
+          {
+            "InteractionName": "Interaction3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonLeaderboard"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "LeaderboardScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "EnterName",
+        "Width": 240,
+        "Height": 180,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "boxCoverButton",
+            "Y": 80,
+            "Width": 240,
+            "Height": 100,
+            "Alpha": 50
+          },
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 240,
+            "Height": 80,
+            "Color": {
+              "Red": 254,
+              "Green": 189,
+              "Blue": 23
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 57,
+            "Y": 6,
+            "Width": 116,
+            "Height": 12,
+            "TextId": "__SingleUse_Q5ZN",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "Box",
+            "Name": "currChar",
+            "X": 64,
+            "Y": 34,
+            "Width": 21,
+            "Height": 28,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 199
+          },
+          {
+            "Type": "TextArea",
+            "Name": "nameChar1",
+            "X": 68,
+            "Y": 40,
+            "Width": 17,
+            "Height": 17,
+            "TextId": "__SingleUse_YMF3",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "nameChar2",
+            "X": 110,
+            "Y": 40,
+            "Width": 17,
+            "Height": 17,
+            "TextId": "__SingleUse_Z1YE",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {}
+          },
+          {
+            "Type": "TextArea",
+            "Name": "nameChar3",
+            "X": 152,
+            "Y": 40,
+            "Width": 17,
+            "Height": 17,
+            "TextId": "__SingleUse_Z41F",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {}
+          }
+        ],
+        "Interactions": []
+      }
+    ],
+    "Name": "Tetris",
+    "Resolution": {
+      "Width": 240,
+      "Height": 320
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "MainMenu",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 240,
+        "Height": 320
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommandOverride": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommandOverride": "make -f ../gcc/Makefile flash",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Portrait",
+    "Family": "STM32F4",
+    "SubFamily": "STM32F429/439",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m4",
+    "ProjectFile": "../STM32F429I_DISCO_REV_D01.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": [
+      "CWRVector",
+      "VectorFonts"
+    ]
+  },
+  "Version": "4.25.0",
+  "CreatedBy": "4.25.0"
+}

@@ -1,0 +1,6 @@
+../Application/User/Leaderboard.c:7:6:Leaderboard_Init	16	static
+../Application/User/Leaderboard.c:16:6:Leaderboard_IsNewHighScore	0	static
+../Application/User/Leaderboard.c:20:6:Leaderboard_AddScoreWithName	24	static
+../Application/User/Leaderboard.c:43:25:Leaderboard_GetEntries	0	static
+../Application/User/Leaderboard.c:47:6:Leaderboard_Save	0	static
+../Application/User/Leaderboard.c:52:6:Leaderboard_Load	0	static

@@ -1,0 +1,5 @@
+../../TouchGFX/gui/include/gui/mainmenu_screen/MainMenuPresenter.hpp:28:13:MainMenuPresenter::~MainMenuPresenter()	1
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/mainmenu_screen/MainMenuPresenter.cpp:10:6:virtual void MainMenuPresenter::activate()	1
+../../TouchGFX/gui/include/gui/mainmenu_screen/MainMenuPresenter.hpp:28:13:virtual MainMenuPresenter::~MainMenuPresenter()	1
+../../TouchGFX/gui/include/gui/mainmenu_screen/MainMenuPresenter.hpp:28:13:virtual void* MainMenuPresenter::_ZThn4_N17MainMenuPresenterD1Ev()	1
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/mainmenu_screen/MainMenuPresenter.cpp:4:1:MainMenuPresenter::MainMenuPresenter(MainMenuView&)	1

@@ -1,0 +1,5 @@
+../../TouchGFX/gui/include/gui/leaderboardscreen_screen/LeaderboardScreenPresenter.hpp:28:13:LeaderboardScreenPresenter::~LeaderboardScreenPresenter()	1
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/leaderboardscreen_screen/LeaderboardScreenPresenter.cpp:10:6:virtual void LeaderboardScreenPresenter::activate()	1
+../../TouchGFX/gui/include/gui/leaderboardscreen_screen/LeaderboardScreenPresenter.hpp:28:13:virtual LeaderboardScreenPresenter::~LeaderboardScreenPresenter()	1
+../../TouchGFX/gui/include/gui/leaderboardscreen_screen/LeaderboardScreenPresenter.hpp:28:13:virtual void* LeaderboardScreenPresenter::_ZThn4_N26LeaderboardScreenPresenterD1Ev()	1
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/leaderboardscreen_screen/LeaderboardScreenPresenter.cpp:4:1:LeaderboardScreenPresenter::LeaderboardScreenPresenter(LeaderboardScreenView&)	1

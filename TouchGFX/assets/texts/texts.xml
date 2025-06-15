@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.25.0">
+  <Languages>
+    <Language Id="GB" />
+  </Languages>
+  <Texts>
+    <TextGroup Id="Group1" />
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_ZFND" Alignment="Center" TypographyId="Typography_01">
+        <Translation Language="GB">main menu</Translation>
+      </Text>
+      <Text Id="__SingleUse_XSST" Alignment="Center" TypographyId="LEADERBOARD">
+        <Translation Language="GB">&lt;value&gt; - &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_CZRL" Alignment="Center" TypographyId="LEADERBOARD">
+        <Translation Language="GB">&lt;value&gt; - &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_TS20" Alignment="Center" TypographyId="LEADERBOARD">
+        <Translation Language="GB">&lt;value&gt; - &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_2MJY" Alignment="Center" TypographyId="LEADERBOARD">
+        <Translation Language="GB">&lt;value&gt; - &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_ORZS" Alignment="Center" TypographyId="LEADERBOARD">
+        <Translation Language="GB">&lt;value&gt; - &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z8FB" Alignment="Left" TypographyId="Typography_01">
+        <Translation Language="GB">leaderboard</Translation>
+      </Text>
+      <Text Id="__SingleUse_DSKW" Alignment="Center" TypographyId="gameoverscreenbutton">
+        <Translation Language="GB"> leaderboard</Translation>
+      </Text>
+      <Text Id="__SingleUse_KOW0" Alignment="Center" TypographyId="gameoverscreenbutton">
+        <Translation Language="GB">restart</Translation>
+      </Text>
+      <Text Id="__SingleUse_T9P0" Alignment="Center" TypographyId="gameoverscreenbutton">
+        <Translation Language="GB">main menu</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z41F" Alignment="Left" TypographyId="Typography_04">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z1YE" Alignment="Left" TypographyId="Typography_04">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_YMF3" Alignment="Left" TypographyId="Typography_04">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q5ZN" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">enter Name</Translation>
+      </Text>
+      <Text Id="__SingleUse_K97O" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">New high score!!!</Translation>
+      </Text>
+      <Text Id="__SingleUse_MXZX" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_50XG" Alignment="Left" TypographyId="Typography_04">
+        <Translation Language="GB">score</Translation>
+      </Text>
+      <Text Id="__SingleUse_CHN0" Alignment="Left" TypographyId="gameover">
+        <Translation Language="GB">game over</Translation>
+      </Text>
+      <Text Id="__SingleUse_RA26" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">main menu</Translation>
+      </Text>
+      <Text Id="__SingleUse_WRL6" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">continue</Translation>
+      </Text>
+      <Text Id="__SingleUse_V9K9" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">Leaderboard</Translation>
+      </Text>
+      <Text Id="__SingleUse_T0UJ" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB"> New game</Translation>
+      </Text>
+      <Text Id="__SingleUse_0BGG" Alignment="Left" TypographyId="Typography_01">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_P2CN" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">level</Translation>
+      </Text>
+      <Text Id="__SingleUse_93Z0" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">return</Translation>
+      </Text>
+      <Text Id="__SingleUse_4OO6" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Place blocks to form complete rows&#10;Each row will earn you 100pt&#10;&#10;Use LEFT, RIGHT button to move the block&#10;to left and right&#10;Use MIDDLE button to rotate the block&#10;Use DOWN button to make the block&#10;go down faster&#10;&#10;&#10;GOOD LUCK!</Translation>
+      </Text>
+      <Text Id="__SingleUse_VGPF" Alignment="Center" TypographyId="Typography_01">
+        <Translation Language="GB">tetris</Translation>
+      </Text>
+      <Text Id="__SingleUse_YY7H" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB"> restart</Translation>
+      </Text>
+      <Text Id="__SingleUse_N7DX" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB"> how to play</Translation>
+      </Text>
+      <Text Id="__SingleUse_RKHJ" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB"> resume</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZPPM" Alignment="Left" TypographyId="Typography_01">
+        <Translation Language="GB">paused</Translation>
+      </Text>
+      <Text Id="__SingleUse_H6WL" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">Next</Translation>
+      </Text>
+      <Text Id="scoreArea" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_0IVO" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">score</Translation>
+      </Text>
+    </TextGroup>
+  </Texts>
+  <Typographies>
+    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Small" Font="verdana.ttf" Size="15" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_00" Font="font_8-bit-pusab.ttf" Size="12" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_01" Font="font_8-bit-pusab.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_02" Font="ROGFonts-Regular.otf" Size="14" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_03" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="gameover" Font="font_8-bit-pusab.ttf" Size="25" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_04" Font="font_8-bit-pusab.ttf" Size="17" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="gameoverscreenbutton" Font="font_8-bit-pusab.ttf" Size="8" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="LEADERBOARD" Font="font_8bit16.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+  </Typographies>
+</TextDatabase>

@@ -1,0 +1,5 @@
+../../TouchGFX/gui/include/gui/howtoplayscreen_screen/HowToPlayScreenPresenter.hpp:28:13:HowToPlayScreenPresenter::~HowToPlayScreenPresenter()	0	static
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/howtoplayscreen_screen/HowToPlayScreenPresenter.cpp:10:6:virtual void HowToPlayScreenPresenter::activate()	0	static
+../../TouchGFX/gui/include/gui/howtoplayscreen_screen/HowToPlayScreenPresenter.hpp:28:13:virtual HowToPlayScreenPresenter::~HowToPlayScreenPresenter()	8	static
+../../TouchGFX/gui/include/gui/howtoplayscreen_screen/HowToPlayScreenPresenter.hpp:28:13:virtual void* HowToPlayScreenPresenter::_ZThn4_N24HowToPlayScreenPresenterD1Ev()	0	static
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/howtoplayscreen_screen/HowToPlayScreenPresenter.cpp:4:1:HowToPlayScreenPresenter::HowToPlayScreenPresenter(HowToPlayScreenView&)	0	static
