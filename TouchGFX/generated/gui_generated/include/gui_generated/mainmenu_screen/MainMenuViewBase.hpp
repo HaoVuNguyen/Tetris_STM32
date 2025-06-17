@@ -10,6 +10,7 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <touchgfx/widgets/Button.hpp>
 
 class MainMenuViewBase : public touchgfx::View<MainMenuPresenter>
 {
@@ -21,6 +22,10 @@ public:
     /*
      * Virtual Action Handlers
      */
+    virtual void buttonNewGameClicked()
+    {
+        // Override and implement this function in MainMenu
+    }
     virtual void buttonContinueClicked()
     {
         // Override and implement this function in MainMenu
@@ -39,6 +44,7 @@ protected:
     touchgfx::ButtonWithLabel buttonNewGame;
     touchgfx::ButtonWithLabel buttonLeaderboard;
     touchgfx::ButtonWithLabel buttonContinue;
+    touchgfx::Button button1;
 
 private:
 

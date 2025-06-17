@@ -84,6 +84,8 @@
 "./Application/User/generated/image_alternate_theme_images_widgets_button_regular_height_36_medium_rounded_action.o"
 "./Application/User/generated/image_alternate_theme_images_widgets_button_regular_height_36_small_rounded_action.o"
 "./Application/User/generated/image_alternate_theme_images_widgets_button_regular_height_36_tiny_rounded_action.o"
+"./Application/User/generated/image_alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.o"
+"./Application/User/generated/image_alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.o"
 "./Application/User/generated/image_icon_theme_images_navigation_menu_28_28_E8F6FB.svg.o"
 "./Application/User/generated/image_logo_tetris.o"
 "./Application/User/gui/EnterName.o"

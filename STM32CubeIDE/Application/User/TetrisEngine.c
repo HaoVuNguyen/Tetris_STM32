@@ -1,4 +1,5 @@
 #include "TetrisEngine.h"
+//#include "Leaderboard.h"
 #include <stdlib.h>
 #include <string.h>
 
@@ -29,10 +30,11 @@ static int nextTetrominoIdx = 0;
 
 static TetrisSaveState savedState;
 static bool hasSavedState = false;
+bool loadSave = false;
 
 // Name input
-static char playerName[NAME_LENGTH + 1] = {'_', '_', '_', '\0'};
-static int currentCharIndex = 0;
+char playerName[NAME_LENGTH + 1] = {'_', '_', '_', '\0'};
+int currentCharIndex = 0;
 
 // Prototypes
 static void newTetromino(void);
@@ -307,6 +309,11 @@ void TetrisEngine_LoadState(void) {
 	gameOver = savedState.gameOver;
 	gameStarted = savedState.gameStarted;
 }
+
+void TetrisEngine_SetShouldLoad(bool shouldLoad)
+{
+	loadSave = shouldLoad;
+}
 bool TetrisEngine_HasValidSave(void) {
 	if (!hasSavedState) return false;
 
@@ -321,11 +328,10 @@ bool TetrisEngine_HasValidSave(void) {
 }
 
 // Enter Name Feature
-void EnterName_Init(uint32_t s) {
+void EnterName_Init(void) {
     for (int i = 0; i < NAME_LENGTH; i++) playerName[i] = '_';
     playerName[NAME_LENGTH] = '\0';
     currentCharIndex = 0;
-    score = s;
 }
 
 bool isNameComplete(void) {

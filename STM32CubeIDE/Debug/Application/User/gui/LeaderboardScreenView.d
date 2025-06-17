@@ -53,7 +53,8 @@ Application/User/gui/LeaderboardScreenView.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
+ F:\Documents\TouchGFXProject\Tetris\STM32CubeIDE\Application\User\Leaderboard.h
 ../../TouchGFX/gui/include/gui/leaderboardscreen_screen/LeaderboardScreenView.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/leaderboardscreen_screen/LeaderboardScreenViewBase.hpp:
 ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -108,3 +109,4 @@ Application/User/gui/LeaderboardScreenView.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
+F:\Documents\TouchGFXProject\Tetris\STM32CubeIDE\Application\User\Leaderboard.h:

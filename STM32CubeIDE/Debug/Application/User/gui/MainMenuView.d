@@ -53,7 +53,8 @@ Application/User/gui/MainMenuView.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
- F:\Documents\TouchGFXProject\Tetris\STM32CubeIDE\Application\User\TetrisEngine.h
+ F:\Documents\TouchGFXProject\Tetris\STM32CubeIDE\Application\User\TetrisEngine.h \
+ F:\Documents\TouchGFXProject\Tetris\STM32CubeIDE\Application\User\Leaderboard.h
 ../../TouchGFX/gui/include/gui/mainmenu_screen/MainMenuView.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/mainmenu_screen/MainMenuViewBase.hpp:
 ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -108,3 +109,4 @@ Application/User/gui/MainMenuView.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 F:\Documents\TouchGFXProject\Tetris\STM32CubeIDE\Application\User\TetrisEngine.h:
+F:\Documents\TouchGFXProject\Tetris\STM32CubeIDE\Application\User\Leaderboard.h:

@@ -42,7 +42,8 @@ F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/leaderb
 F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/leaderboardscreen_screen/LeaderboardScreenViewBase.cpp:71:6:void LeaderboardScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:49:36:virtual touchgfx::TextArea::BoundingArea touchgfx::TextAreaWithWildcardBase::calculateBoundingArea() const	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:43:5:touchgfx::TextArea::TextArea()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:128:5:touchgfx::TextAreaWithTwoWildcards::TextAreaWithTwoWildcards()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:132:10:void touchgfx::ButtonWithLabel::updateTextPosition()	24	static
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/leaderboardscreen_screen/LeaderboardScreenViewBase.cpp:9:1:LeaderboardScreenViewBase::LeaderboardScreenViewBase()	88	static
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/leaderboardscreen_screen/LeaderboardScreenViewBase.cpp:9:1:LeaderboardScreenViewBase::LeaderboardScreenViewBase()	96	static

@@ -21,6 +21,9 @@ typedef enum {
     BUTTON_ROTATE
 } TetrisButton;
 
+extern char playerName[NAME_LENGTH + 1];
+extern int currentCharIdx;
+
 extern int tetrominoes[7][16];
 int rotate(int x, int y, int r);
 
@@ -56,13 +59,14 @@ typedef struct {
 } TetrisSaveState;
 
 
-
+extern bool loadSave;
 void TetrisEngine_SaveState(void);
 void TetrisEngine_LoadState(void);
+void TetrisEngine_SetShouldLoad(bool shouldLoad);
 bool TetrisEngine_HasValidSave(void);
 
 // For high score name input
-void EnterName_Init(uint32_t score);
+void EnterName_Init(void);
 void EnterName_HandleButton(TetrisButton button);
 bool isNameComplete(void);
 

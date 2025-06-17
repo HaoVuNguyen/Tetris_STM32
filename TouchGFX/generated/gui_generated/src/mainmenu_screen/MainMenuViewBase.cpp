@@ -41,6 +41,12 @@ MainMenuViewBase::MainMenuViewBase() :
     buttonContinue.setVisible(false);
     buttonContinue.setAction(buttonCallback);
     add(buttonContinue);
+
+    button1.setXY(0, 0);
+    button1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_PRESSED_ID));
+    button1.setVisible(false);
+    button1.setAction(buttonCallback);
+    add(button1);
 }
 
 MainMenuViewBase::~MainMenuViewBase()
@@ -58,9 +64,9 @@ void MainMenuViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src
     if (&src == &buttonNewGame)
     {
         //Interaction1
-        //When buttonNewGame clicked change screen to GameScreen
-        //Go to GameScreen with no screen transition
-        application().gotoGameScreenScreenNoTransition();
+        //When buttonNewGame clicked call virtual function
+        //Call buttonNewGameClicked
+        buttonNewGameClicked();
     }
     if (&src == &buttonContinue)
     {
@@ -75,5 +81,12 @@ void MainMenuViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src
         //When buttonLeaderboard clicked change screen to LeaderboardScreen
         //Go to LeaderboardScreen with no screen transition
         application().gotoLeaderboardScreenScreenNoTransition();
+    }
+    if (&src == &button1)
+    {
+        //Interaction4
+        //When button1 clicked change screen to GameScreen
+        //Go to GameScreen with no screen transition
+        application().gotoGameScreenScreenNoTransition();
     }
 }

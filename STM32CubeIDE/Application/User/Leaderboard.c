@@ -4,12 +4,17 @@
 // Simulated Flash storage (replace with real Flash or EEPROM for production)
 static LeaderboardEntry entries[LEADERBOARD_SIZE];
 
+static bool leaderboardInitFlag = false;
+
+
 void Leaderboard_Init(void) {
-    // Default all entries to empty
+    if (leaderboardInitFlag) return;
+	// Default all entries to empty
     for (int i = 0; i < LEADERBOARD_SIZE; i++) {
         strcpy(entries[i].name, "---");
         entries[i].score = 0;
     }
+    leaderboardInitFlag = true;
     Leaderboard_Load();
 }
 

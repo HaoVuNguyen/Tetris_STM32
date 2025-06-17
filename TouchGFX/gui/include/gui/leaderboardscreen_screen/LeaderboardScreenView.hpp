@@ -11,7 +11,12 @@ public:
     virtual ~LeaderboardScreenView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+
+
+
 protected:
+    Unicode::UnicodeChar nameBuffer[6];
+    Unicode::UnicodeChar scoreBuffer[7];
 };
 
 #endif // LEADERBOARDSCREENVIEW_HPP

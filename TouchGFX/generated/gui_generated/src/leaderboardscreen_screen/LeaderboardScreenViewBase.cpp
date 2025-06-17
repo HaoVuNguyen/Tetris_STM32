@@ -19,31 +19,31 @@ LeaderboardScreenViewBase::LeaderboardScreenViewBase() :
     textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_Z8FB));
     add(textArea1);
 
-    highScore1.setXY(98, 60);
+    highScore1.setPosition(40, 60, 160, 25);
     highScore1.setColor(touchgfx::Color::getColorFromRGB(255, 0, 1));
     highScore1.setLinespacing(0);
     highScore1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_ORZS));
     add(highScore1);
 
-    highScore3.setXY(98, 140);
+    highScore3.setPosition(40, 140, 160, 25);
     highScore3.setColor(touchgfx::Color::getColorFromRGB(255, 195, 0));
     highScore3.setLinespacing(0);
     highScore3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_2MJY));
     add(highScore3);
 
-    highScore4.setXY(98, 180);
+    highScore4.setPosition(40, 180, 160, 25);
     highScore4.setColor(touchgfx::Color::getColorFromRGB(1, 106, 55));
     highScore4.setLinespacing(0);
     highScore4.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CZRL));
     add(highScore4);
 
-    highScore5.setXY(98, 221);
+    highScore5.setPosition(40, 221, 160, 25);
     highScore5.setColor(touchgfx::Color::getColorFromRGB(0, 81, 138));
     highScore5.setLinespacing(0);
     highScore5.setTypedText(touchgfx::TypedText(T___SINGLEUSE_XSST));
     add(highScore5);
 
-    highScore2.setXY(98, 100);
+    highScore2.setPosition(40, 100, 160, 25);
     highScore2.setColor(touchgfx::Color::getColorFromRGB(247, 104, 6));
     highScore2.setLinespacing(0);
     highScore2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_TS20));

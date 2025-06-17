@@ -4,6 +4,7 @@
 #include <gui_generated/gamescreen_screen/GameScreenViewBase.hpp>
 #include <gui/gamescreen_screen/GameScreenPresenter.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 #include <gui/containers/TetrominoI.hpp>
 #include <gui/containers/TetrominoJ.hpp>
 #include <gui/containers/TetrominoL.hpp>
@@ -36,8 +37,8 @@ public:
 
     uint8_t lastArena[20][10];
 
+    void updateCurrNameChar();
 
-    //void showCurrentFallingTetromino();
 protected:
     TetrominoI tetrominoI;
 	TetrominoJ tetrominoJ;
@@ -56,7 +57,7 @@ protected:
 
 	bool isPaused = false;
 
-
+	uint32_t runScore;
 };
 
 #endif // GAMESCREENVIEW_HPP

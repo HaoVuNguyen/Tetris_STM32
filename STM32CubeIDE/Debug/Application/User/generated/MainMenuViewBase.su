@@ -15,19 +15,21 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
-../../TouchGFX/generated/gui_generated/include/gui_generated/mainmenu_screen/MainMenuViewBase.hpp:24:18:virtual void MainMenuViewBase::buttonContinueClicked()	0	static
+../../TouchGFX/generated/gui_generated/include/gui_generated/mainmenu_screen/MainMenuViewBase.hpp:25:18:virtual void MainMenuViewBase::buttonNewGameClicked()	0	static
+../../TouchGFX/generated/gui_generated/include/gui_generated/mainmenu_screen/MainMenuViewBase.hpp:29:18:virtual void MainMenuViewBase::buttonContinueClicked()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<MainMenuPresenter>::~View()	0	static
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/mainmenu_screen/MainMenuViewBase.cpp:46:1:MainMenuViewBase::~MainMenuViewBase()	0	static
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/mainmenu_screen/MainMenuViewBase.cpp:51:6:virtual void MainMenuViewBase::setupScreen()	0	static
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/mainmenu_screen/MainMenuViewBase.cpp:52:1:MainMenuViewBase::~MainMenuViewBase()	0	static
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/mainmenu_screen/MainMenuViewBase.cpp:57:6:virtual void MainMenuViewBase::setupScreen()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<MainMenuViewBase, const touchgfx::AbstractButton&>::~Callback()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = MainMenuViewBase; T1 = const touchgfx::AbstractButton&]	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = MainMenuViewBase; T1 = const touchgfx::AbstractButton&]	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<MainMenuViewBase, const touchgfx::AbstractButton&>::~Callback()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<MainMenuPresenter>::~View()	8	static
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/mainmenu_screen/MainMenuViewBase.cpp:46:1:virtual MainMenuViewBase::~MainMenuViewBase()	8	static
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/mainmenu_screen/MainMenuViewBase.cpp:52:1:virtual MainMenuViewBase::~MainMenuViewBase()	8	static
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/mainmenu_screen/MainMenuViewBase.cpp:62:6:void MainMenuViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/mainmenu_screen/MainMenuViewBase.cpp:56:6:void MainMenuViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:touchgfx::Widget::Widget()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:132:10:void touchgfx::ButtonWithLabel::updateTextPosition()	24	static
 F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/mainmenu_screen/MainMenuViewBase.cpp:9:1:MainMenuViewBase::MainMenuViewBase()	56	static

@@ -63,6 +63,16 @@
               "Blue": 255
             },
             "TextRotation": "0"
+          },
+          {
+            "Type": "Button",
+            "Name": "button1",
+            "Width": 240,
+            "Height": 50,
+            "Visible": false,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.png",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\medium_rounded_normal.json"
           }
         ],
         "Interactions": [
@@ -73,9 +83,8 @@
               "TriggerComponent": "buttonNewGame"
             },
             "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "GameScreen"
+              "Type": "ActionCustom",
+              "FunctionName": "buttonNewGameClicked"
             }
           },
           {
@@ -99,6 +108,18 @@
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "LeaderboardScreen"
+            }
+          },
+          {
+            "InteractionName": "Interaction4",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "button1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "GameScreen"
             }
           }
         ]
@@ -377,44 +398,42 @@
           {
             "Type": "TextArea",
             "Name": "highScore1",
-            "X": 98,
+            "X": 40,
             "Y": 60,
-            "Width": 45,
-            "Height": 20,
+            "Width": 160,
+            "Height": 25,
             "TextId": "__SingleUse_ORZS",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
               "Blue": 1
             },
-            "AutoSize": true,
             "Wildcard1": {},
             "Wildcard2": {}
           },
           {
             "Type": "TextArea",
             "Name": "highScore3",
-            "X": 98,
+            "X": 40,
             "Y": 140,
-            "Width": 45,
-            "Height": 20,
+            "Width": 160,
+            "Height": 25,
             "TextId": "__SingleUse_2MJY",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
               "Green": 195
             },
-            "AutoSize": true,
             "Wildcard1": {},
             "Wildcard2": {}
           },
           {
             "Type": "TextArea",
             "Name": "highScore4",
-            "X": 98,
+            "X": 40,
             "Y": 180,
-            "Width": 45,
-            "Height": 20,
+            "Width": 160,
+            "Height": 25,
             "TextId": "__SingleUse_CZRL",
             "TextRotation": "0",
             "Color": {
@@ -422,34 +441,32 @@
               "Green": 106,
               "Blue": 55
             },
-            "AutoSize": true,
             "Wildcard1": {},
             "Wildcard2": {}
           },
           {
             "Type": "TextArea",
             "Name": "highScore5",
-            "X": 98,
+            "X": 40,
             "Y": 221,
-            "Width": 45,
-            "Height": 20,
+            "Width": 160,
+            "Height": 25,
             "TextId": "__SingleUse_XSST",
             "TextRotation": "0",
             "Color": {
               "Green": 81,
               "Blue": 138
             },
-            "AutoSize": true,
             "Wildcard1": {},
             "Wildcard2": {}
           },
           {
             "Type": "TextArea",
             "Name": "highScore2",
-            "X": 98,
+            "X": 40,
             "Y": 100,
-            "Width": 45,
-            "Height": 20,
+            "Width": 160,
+            "Height": 25,
             "TextId": "__SingleUse_TS20",
             "TextRotation": "0",
             "Color": {
@@ -457,7 +474,6 @@
               "Green": 104,
               "Blue": 6
             },
-            "AutoSize": true,
             "Wildcard1": {},
             "Wildcard2": {}
           },

@@ -8,6 +8,7 @@
 extern "C"{
 #include "main.h"
 #include "F:\Documents\TouchGFXProject\Tetris\STM32CubeIDE\Application\User\TetrisEngine.h"
+#include "F:\Documents\TouchGFXProject\Tetris\STM32CubeIDE\Application\User\Leaderboard.h"
 #include "cmsis_os.h"
 extern osMessageQueueId_t buttonQueueHandle;
 };
@@ -47,9 +48,15 @@ void GameScreenView::setupScreen()
     }
 
     //srand((unsigned int)osKernelGetTickCount());
-    TetrisEngine_Init();
 
-    TetrisEngine_LoadState();
+
+    if (loadSave){
+    	TetrisEngine_LoadState();
+    	//EnterName_Init();
+    } else {
+    	TetrisEngine_Init();
+    	EnterName_Init();
+    }
 
     updateArenaOnScreen();
     //updateFallingTetromino();
@@ -84,8 +91,17 @@ void GameScreenView::handleTickEvent(){
 	}
 
 	if (TetrisEngine_IsGameOver()){
-		gameOverScreen.setScore(TetrisEngine_GetScore());
+		runScore = TetrisEngine_GetScore();
+		gameOverScreen.setScore(runScore);
 		gameOverScreen.setVisible(true);
+
+//		if (Leaderboard_IsNewHighScore(runScore))
+//		{
+//			gameOverScreen.textHighScore.setVisible(true);
+//			gameOverScreen.enterName.setVisible(true);
+//
+//
+//		}
 		gameOverScreen.invalidate();
 	}
 
@@ -103,6 +119,8 @@ void GameScreenView::handleTickEvent(){
 		}
 		else if (!TetrisEngine_IsGameOver() && !isNameComplete()) {
 			EnterName_HandleButton(btn);
+			// Toan bo ham xu li nut dien ten o day
+
 		}
 	}
 }
@@ -222,10 +240,15 @@ void GameScreenView::restartGame()
 {
 	isPaused = false;
 	TetrisEngine_Init();
+	EnterName_Init();
 	menuOverlay.setVisible(false);
 	menuOverlay.invalidate();// Reset engine
 
 	gameOverScreen.setVisible(false);
+
+//	gameOverScreen.textHighScore.setVisible(false);
+//	gameOverScreen.enterName.setVisible(false);
+
 	gameOverScreen.invalidate();
 
 	updateArenaOnScreen();       // Cập nhật lại game state hiển thị
@@ -242,4 +265,10 @@ void GameScreenView::destroyHowToPlay()
 {
 	howToPlayOverlay.setVisible(false);
 	howToPlayOverlay.invalidate();
+}
+
+void GameScreenView::updateCurrNameChar()
+{
+//	gameOverScreen.enterName.currChar.setPosition(64 + currentCharIdx * 42, 21, 28);
+//	gameOverScreen.enterName.currChar.invalidate();
 }

@@ -1,8 +1,8 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/leaderboardscreen_screen/LeaderboardScreenView.cpp:13:6:virtual void LeaderboardScreenView::tearDownScreen()	0	static
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/leaderboardscreen_screen/LeaderboardScreenView.cpp:30:6:virtual void LeaderboardScreenView::tearDownScreen()	0	static
 ../../TouchGFX/gui/include/gui/leaderboardscreen_screen/LeaderboardScreenView.hpp:11:13:LeaderboardScreenView::~LeaderboardScreenView()	8	static
 ../../TouchGFX/gui/include/gui/leaderboardscreen_screen/LeaderboardScreenView.hpp:11:13:virtual LeaderboardScreenView::~LeaderboardScreenView()	8	static
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/leaderboardscreen_screen/LeaderboardScreenView.cpp:3:1:LeaderboardScreenView::LeaderboardScreenView()	8	static
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/leaderboardscreen_screen/LeaderboardScreenView.cpp:8:6:virtual void LeaderboardScreenView::setupScreen()	0	static
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/leaderboardscreen_screen/LeaderboardScreenView.cpp:6:1:LeaderboardScreenView::LeaderboardScreenView()	8	static
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/leaderboardscreen_screen/LeaderboardScreenView.cpp:13:6:virtual void LeaderboardScreenView::setupScreen()	16	static
