@@ -84,9 +84,9 @@ void MenuOverlayBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
     if (&src == &buttonHowToPlay)
     {
         //Interaction3
-        //When buttonHowToPlay clicked change screen to HowToPlayScreen
-        //Go to HowToPlayScreen with no screen transition
-        application().gotoHowToPlayScreenScreenNoTransition();
+        //When buttonHowToPlay clicked call virtual function
+        //Call buttonHowToPlayClicked
+        buttonHowToPlayClicked();
     }
     if (&src == &buttonMainMenu)
     {

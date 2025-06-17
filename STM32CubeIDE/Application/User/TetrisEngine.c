@@ -27,6 +27,9 @@ static int currX = 0;
 static int currY = 0;
 static int nextTetrominoIdx = 0;
 
+static TetrisSaveState savedState;
+static bool hasSavedState = false;
+
 // Name input
 static char playerName[NAME_LENGTH + 1] = {'_', '_', '_', '\0'};
 static int currentCharIndex = 0;
@@ -64,7 +67,11 @@ void TetrisEngine_Update(void) {
 }
 
 void TetrisEngine_OnButtonPress(TetrisButton button) {
-    if (gameOver) return;
+    if (gameOver) {
+    	hasSavedState = false;
+    	return;
+    }
+
 
     switch (button) {
         case BUTTON_LEFT:
@@ -240,9 +247,12 @@ static void checkLines(void) {
 }
 
 
-int TetrisEngine_GetLevel(void){
-	int level = 1 + score / POINT_PER_LEVEL;
-	return (level > MAX_LEVEL) ? MAX_LEVEL : level;
+uint32_t TetrisEngine_GetLevel(void){
+	int level = 1 + (score / POINT_PER_LEVEL);
+	if (level > MAX_LEVEL)
+	    return MAX_LEVEL;
+	else
+	    return level;
 }
 
 
@@ -263,9 +273,52 @@ uint32_t TetrisEngine_GetDropDelay(void){
 }
 
 // Placeholder for Save/Load and Leaderboard
-void TetrisEngine_SaveState(void) {}
-void TetrisEngine_LoadState(void) {}
-bool TetrisEngine_HasValidSave(void) { return false; }
+void TetrisEngine_SaveState(void) {
+	memcpy(savedState.arena, arena, sizeof(arena));
+	savedState.currTetrominoIdx = currTetrominoIdx;
+	savedState.currRotation = currRotation;
+	savedState.currX = currX;
+	savedState.currY = currY;
+	savedState.nextTetrominoIdx = nextTetrominoIdx;
+	savedState.score = score;
+	savedState.gameOver = gameOver;
+	savedState.gameStarted = gameStarted;
+
+	// Tạo CRC đơn giản (XOR tất cả giá trị làm ví dụ)
+	uint32_t* p = (uint32_t*)&savedState;
+	uint32_t crc = 0;
+	for (int i = 0; i < sizeof(TetrisSaveState) / sizeof(uint32_t) - 1; i++) {
+		crc ^= p[i];
+	}
+	savedState.crc = crc;
+
+	hasSavedState = true;
+}
+void TetrisEngine_LoadState(void) {
+	if (!TetrisEngine_HasValidSave()) return;
+
+	memcpy(arena, savedState.arena, sizeof(arena));
+	currTetrominoIdx = savedState.currTetrominoIdx;
+	currRotation = savedState.currRotation;
+	currX = savedState.currX;
+	currY = savedState.currY;
+	nextTetrominoIdx = savedState.nextTetrominoIdx;
+	score = savedState.score;
+	gameOver = savedState.gameOver;
+	gameStarted = savedState.gameStarted;
+}
+bool TetrisEngine_HasValidSave(void) {
+	if (!hasSavedState) return false;
+
+	// Kiểm tra CRC
+	uint32_t* p = (uint32_t*)&savedState;
+	uint32_t crc = 0;
+	for (int i = 0; i < sizeof(TetrisSaveState) / sizeof(uint32_t) - 1; i++) {
+		crc ^= p[i];
+	}
+
+	return crc == savedState.crc;
+}
 
 // Enter Name Feature
 void EnterName_Init(uint32_t s) {

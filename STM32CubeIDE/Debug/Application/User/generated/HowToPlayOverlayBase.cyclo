@@ -10,26 +10,22 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:501:18:virtual void touchgfx::Drawable::handleTickEvent()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:703:18:virtual void touchgfx::Drawable::setupDrawChain(const touchgfx::Rect&, touchgfx::Drawable**)	1
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:93:18:virtual void touchgfx::Screen::setupScreen()	1
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	1
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	1
-../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<HowToPlayScreenPresenter>::~View()	1
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/howtoplayscreen_screen/HowToPlayScreenViewBase.cpp:38:1:HowToPlayScreenViewBase::~HowToPlayScreenViewBase()	1
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/howtoplayscreen_screen/HowToPlayScreenViewBase.cpp:43:6:virtual void HowToPlayScreenViewBase::setupScreen()	1
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<HowToPlayScreenViewBase, const touchgfx::AbstractButton&>::~Callback()	1
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = HowToPlayScreenViewBase; T1 = const touchgfx::AbstractButton&]	2
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = HowToPlayScreenViewBase; T1 = const touchgfx::AbstractButton&]	3
+../../TouchGFX/generated/gui_generated/include/gui_generated/containers/HowToPlayOverlayBase.hpp:23:18:virtual void HowToPlayOverlayBase::buttonReturnClicked()	1
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/containers/HowToPlayOverlayBase.cpp:40:1:HowToPlayOverlayBase::~HowToPlayOverlayBase()	1
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/containers/HowToPlayOverlayBase.cpp:45:6:virtual void HowToPlayOverlayBase::initialize()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<HowToPlayOverlayBase, const touchgfx::AbstractButton&>::~Callback()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = HowToPlayOverlayBase; T1 = const touchgfx::AbstractButton&]	2
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = HowToPlayOverlayBase; T1 = const touchgfx::AbstractButton&]	3
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	1
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<HowToPlayScreenViewBase, const touchgfx::AbstractButton&>::~Callback()	1
-../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<HowToPlayScreenPresenter>::~View()	1
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/howtoplayscreen_screen/HowToPlayScreenViewBase.cpp:38:1:virtual HowToPlayScreenViewBase::~HowToPlayScreenViewBase()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<HowToPlayOverlayBase, const touchgfx::AbstractButton&>::~Callback()	1
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/containers/HowToPlayOverlayBase.cpp:40:1:virtual HowToPlayOverlayBase::~HowToPlayOverlayBase()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/containers/HowToPlayOverlayBase.cpp:50:6:void HowToPlayOverlayBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	3
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/howtoplayscreen_screen/HowToPlayScreenViewBase.cpp:48:6:void HowToPlayScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	2
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:43:5:touchgfx::TextArea::TextArea()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:132:10:void touchgfx::ButtonWithLabel::updateTextPosition()	2
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/howtoplayscreen_screen/HowToPlayScreenViewBase.cpp:9:1:HowToPlayScreenViewBase::HowToPlayScreenViewBase()	1
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/containers/HowToPlayOverlayBase.cpp:9:1:HowToPlayOverlayBase::HowToPlayOverlayBase()	1

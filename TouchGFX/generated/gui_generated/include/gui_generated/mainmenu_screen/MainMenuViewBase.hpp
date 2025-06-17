@@ -21,10 +21,6 @@ public:
     /*
      * Virtual Action Handlers
      */
-    virtual void buttonNewGameClicked()
-    {
-        // Override and implement this function in MainMenu
-    }
     virtual void buttonContinueClicked()
     {
         // Override and implement this function in MainMenu

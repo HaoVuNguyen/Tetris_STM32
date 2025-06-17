@@ -27,7 +27,7 @@ int rotate(int x, int y, int r);
 void TetrisEngine_Init(void);
 void TetrisEngine_Update(void);
 void TetrisEngine_OnButtonPress(TetrisButton button);
-int TetrisEngine_GetLevel(void);
+uint32_t TetrisEngine_GetLevel(void);
 uint32_t TetrisEngine_GetDropDelay(void);
 
 const uint8_t (*TetrisEngine_GetArena(void))[A_WIDTH];

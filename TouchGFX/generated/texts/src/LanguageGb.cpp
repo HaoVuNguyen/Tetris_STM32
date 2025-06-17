@@ -10,6 +10,9 @@ KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE;
 // Remap all strings
 TEXT_LOCATION_FLASH_PRAGMA
 KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
+    367, // T___SINGLEUSE_I1RP: "tetris"
+    360, // T___SINGLEUSE_R43B: "return"
+    0,   // T___SINGLEUSE_ETBX: "Place blocks to form complete rows\nEach row will earn you 100pt\n\nUse LEFT, RIGHT button to move the block\nto left and right\nUse MIDDLE button to rotate the block\nUse DOWN button to make the block\ngo down faster\n\n\nGOOD LUCK!"
     317, // T___SINGLEUSE_ZFND: "main menu"
     224, // T___SINGLEUSE_XSST: "<> - <>"
     224, // T___SINGLEUSE_CZRL: "<> - <>"
@@ -32,11 +35,8 @@ KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
     336, // T___SINGLEUSE_WRL6: "continue"
     274, // T___SINGLEUSE_V9K9: "Leaderboard"
     297, // T___SINGLEUSE_T0UJ: " New game"
-    228, // T___SINGLEUSE_0BGG: "<>"
+    228, // T_LEVELAREA: "<>"
     374, // T___SINGLEUSE_P2CN: "level"
-    360, // T___SINGLEUSE_93Z0: "return"
-    0,   // T___SINGLEUSE_4OO6: "Place blocks to form complete rows\nEach row will earn you 100pt\n\nUse LEFT, RIGHT button to move the block\nto left and right\nUse MIDDLE button to rotate the block\nUse DOWN button to make the block\ngo down faster\n\n\nGOOD LUCK!"
-    367, // T___SINGLEUSE_VGPF: "tetris"
     327, // T___SINGLEUSE_YY7H: " restart"
     248, // T___SINGLEUSE_N7DX: " how to play"
     345, // T___SINGLEUSE_RKHJ: " resume"

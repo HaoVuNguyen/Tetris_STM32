@@ -21,23 +21,26 @@ GameScreenViewBase::GameScreenViewBase() :
     gameArea.setColor(touchgfx::Color::getColorFromRGB(70, 68, 118));
     add(gameArea);
 
+    gameAreaContainer.setPosition(5, 35, 140, 280);
+    add(gameAreaContainer);
+
     buttonMenu.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_MENU_28_28_E8F6FB_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_MENU_28_28_E8F6FB_SVG_ID));
     buttonMenu.setIconXY(0, 0);
     buttonMenu.setAction(flexButtonCallback);
     buttonMenu.setPosition(5, 4, 28, 28);
     add(buttonMenu);
 
-    levelArea.setXY(190, 254);
-    levelArea.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    levelArea.setLinespacing(0);
-    levelArea.setTypedText(touchgfx::TypedText(T___SINGLEUSE_0BGG));
-    add(levelArea);
-
     levelText.setXY(166, 228);
     levelText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     levelText.setLinespacing(0);
     levelText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_P2CN));
     add(levelText);
+
+    levelArea.setPosition(150, 255, 87, 30);
+    levelArea.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    levelArea.setLinespacing(0);
+    levelArea.setTypedText(touchgfx::TypedText(T_LEVELAREA));
+    add(levelArea);
 
     scoreText.setPosition(156, 153, 80, 21);
     scoreText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -91,13 +94,17 @@ GameScreenViewBase::GameScreenViewBase() :
     nextL.setVisible(false);
     add(nextL);
 
+    gameOverScreen.setXY(0, 0);
+    gameOverScreen.setVisible(false);
+    add(gameOverScreen);
+
     menuOverlay.setXY(0, 0);
     menuOverlay.setVisible(false);
     add(menuOverlay);
 
-    gameOverScreen.setXY(0, 0);
-    gameOverScreen.setVisible(false);
-    add(gameOverScreen);
+    howToPlayOverlay.setXY(0, 0);
+    howToPlayOverlay.setVisible(false);
+    add(howToPlayOverlay);
 }
 
 GameScreenViewBase::~GameScreenViewBase()
@@ -114,8 +121,9 @@ void GameScreenViewBase::setupScreen()
     nextZ.initialize();
     nextJ.initialize();
     nextL.initialize();
-    menuOverlay.initialize();
     gameOverScreen.initialize();
+    menuOverlay.initialize();
+    howToPlayOverlay.initialize();
 }
 
 void GameScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)

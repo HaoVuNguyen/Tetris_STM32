@@ -26,9 +26,6 @@
     <ClCompile Include="..\..\gui\src\gamescreen_screen\GameScreenPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\gamescreen_screen\GameScreenView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\gamescreen_screen\GameScreenViewBase.cpp"/>
-    <ClCompile Include="..\..\gui\src\howtoplayscreen_screen\HowToPlayScreenPresenter.cpp"/>
-    <ClCompile Include="..\..\gui\src\howtoplayscreen_screen\HowToPlayScreenView.cpp"/>
-    <ClCompile Include="..\..\generated\gui_generated\src\howtoplayscreen_screen\HowToPlayScreenViewBase.cpp"/>
     <ClCompile Include="..\..\gui\src\leaderboardscreen_screen\LeaderboardScreenPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\leaderboardscreen_screen\LeaderboardScreenView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\leaderboardscreen_screen\LeaderboardScreenViewBase.cpp"/>
@@ -53,6 +50,8 @@
     <ClCompile Include="..\..\generated\gui_generated\src\containers\TetrominoTBase.cpp"/>
     <ClCompile Include="..\..\gui\src\containers\TetrominoZ.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\TetrominoZBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\containers\HowToPlayOverlay.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\HowToPlayOverlayBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -205,9 +204,6 @@
     <ClInclude Include="..\..\gui\include\gui\gamescreen_screen\GameScreenPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\gamescreen_screen\GameScreenView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\gamescreen_screen\GameScreenViewBase.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\howtoplayscreen_screen\HowToPlayScreenPresenter.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\howtoplayscreen_screen\HowToPlayScreenView.hpp"/>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\howtoplayscreen_screen\HowToPlayScreenViewBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\leaderboardscreen_screen\LeaderboardScreenPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\leaderboardscreen_screen\LeaderboardScreenView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\leaderboardscreen_screen\LeaderboardScreenViewBase.hpp"/>
@@ -235,6 +231,8 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\TetrominoTBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\containers\TetrominoZ.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\TetrominoZBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\containers\HowToPlayOverlay.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\HowToPlayOverlayBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

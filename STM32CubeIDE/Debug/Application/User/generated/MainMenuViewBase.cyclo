@@ -15,8 +15,7 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
-../../TouchGFX/generated/gui_generated/include/gui_generated/mainmenu_screen/MainMenuViewBase.hpp:24:18:virtual void MainMenuViewBase::buttonNewGameClicked()	1
-../../TouchGFX/generated/gui_generated/include/gui_generated/mainmenu_screen/MainMenuViewBase.hpp:28:18:virtual void MainMenuViewBase::buttonContinueClicked()	1
+../../TouchGFX/generated/gui_generated/include/gui_generated/mainmenu_screen/MainMenuViewBase.hpp:24:18:virtual void MainMenuViewBase::buttonContinueClicked()	1
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<MainMenuPresenter>::~View()	1
 F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/mainmenu_screen/MainMenuViewBase.cpp:46:1:MainMenuViewBase::~MainMenuViewBase()	1
 F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/mainmenu_screen/MainMenuViewBase.cpp:51:6:virtual void MainMenuViewBase::setupScreen()	1

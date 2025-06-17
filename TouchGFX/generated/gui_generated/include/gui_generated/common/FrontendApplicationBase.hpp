@@ -26,9 +26,6 @@ public:
     // GameScreen
     void gotoGameScreenScreenNoTransition();
 
-    // HowToPlayScreen
-    void gotoHowToPlayScreenScreenNoTransition();
-
     // LeaderboardScreen
     void gotoLeaderboardScreenScreenNoTransition();
 
@@ -42,9 +39,6 @@ protected:
 
     // GameScreen
     void gotoGameScreenScreenNoTransitionImpl();
-
-    // HowToPlayScreen
-    void gotoHowToPlayScreenScreenNoTransitionImpl();
 
     // LeaderboardScreen
     void gotoLeaderboardScreenScreenNoTransitionImpl();

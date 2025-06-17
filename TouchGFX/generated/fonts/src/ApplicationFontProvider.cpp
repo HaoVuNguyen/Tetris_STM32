@@ -42,6 +42,12 @@ touchgfx::Font* ApplicationFontProvider::getFont(touchgfx::FontId typography)
     case Typography::LEADERBOARD:
         // font_8bit16_20_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[10]);
+    case Typography::SCORE:
+        // ROGFonts_Regular_otf_14_4bpp
+        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[5]);
+    case Typography::LEVEL:
+        // ROGFonts_Regular_otf_20_4bpp
+        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[11]);
     default:
         return 0;
     }

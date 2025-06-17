@@ -178,12 +178,6 @@
     <Filter Include="Source Files\gui\common">
       <UniqueIdentifier>7C5FE30A-F9EF-F3D7-10C4-1D4AB7F9479A</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\howtoplayscreen_screen">
-      <UniqueIdentifier>DCECEBEB-D57C-33E4-687B-52CAE73B4D95</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\gui\howtoplayscreen_screen">
-      <UniqueIdentifier>DEC7D01A-0BB3-FC14-ACB0-3AE9F1A4E5DD</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\generated\gui_generated\containers">
       <UniqueIdentifier>C3D06575-678C-5444-DC68-F107197F835E</UniqueIdentifier>
     </Filter>
@@ -216,12 +210,6 @@
     </Filter>
     <Filter Include="Source Files\generated\gui_generated\gamescreen_screen">
       <UniqueIdentifier>D870DBDD-A3B6-637F-6377-6FC53E09B2DE</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\howtoplayscreen_screen">
-      <UniqueIdentifier>9958A797-77C8-2211-D028-E4D565498E47</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\generated\gui_generated\howtoplayscreen_screen">
-      <UniqueIdentifier>8F10E840-B479-26DC-0A17-FC0338836210</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\generated\gui_generated\gamescreen_screen">
       <UniqueIdentifier>7BCB211E-E3F7-AB1F-ABCE-F3A8A34E09AD</UniqueIdentifier>
@@ -278,15 +266,6 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\gamescreen_screen\GameScreenViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\gamescreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\howtoplayscreen_screen\HowToPlayScreenPresenter.cpp">
-      <Filter>Source Files\gui\howtoplayscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\howtoplayscreen_screen\HowToPlayScreenView.cpp">
-      <Filter>Source Files\gui\howtoplayscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\howtoplayscreen_screen\HowToPlayScreenViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\howtoplayscreen_screen</Filter>
     </ClCompile>
     <ClCompile Include="..\..\gui\src\leaderboardscreen_screen\LeaderboardScreenPresenter.cpp">
       <Filter>Source Files\gui\leaderboardscreen_screen</Filter>
@@ -358,6 +337,12 @@
       <Filter>Source Files\gui\containers</Filter>
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\TetrominoZBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\HowToPlayOverlay.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\HowToPlayOverlayBase.cpp">
       <Filter>Source Files\generated\gui_generated\containers</Filter>
     </ClCompile>
   </ItemGroup>
@@ -808,15 +793,6 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\gamescreen_screen\GameScreenViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\gamescreen_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\howtoplayscreen_screen\HowToPlayScreenPresenter.hpp">
-      <Filter>Header Files\gui\howtoplayscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\howtoplayscreen_screen\HowToPlayScreenView.hpp">
-      <Filter>Header Files\gui\howtoplayscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\howtoplayscreen_screen\HowToPlayScreenViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\howtoplayscreen_screen</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\gui\include\gui\leaderboardscreen_screen\LeaderboardScreenPresenter.hpp">
       <Filter>Header Files\gui\leaderboardscreen_screen</Filter>
     </ClInclude>
@@ -896,6 +872,12 @@
       <Filter>Header Files\gui\containers</Filter>
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\TetrominoZBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\HowToPlayOverlay.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\HowToPlayOverlayBase.hpp">
       <Filter>Header Files\generated\gui_generated\containers</Filter>
     </ClInclude>
   </ItemGroup>

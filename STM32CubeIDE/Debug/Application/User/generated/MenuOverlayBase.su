@@ -14,6 +14,7 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	0	static
 ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/MenuOverlayBase.hpp:23:18:virtual void MenuOverlayBase::buttonResumeClicked()	0	static
 ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/MenuOverlayBase.hpp:27:18:virtual void MenuOverlayBase::buttonRestartClicked()	0	static
+../../TouchGFX/generated/gui_generated/include/gui_generated/containers/MenuOverlayBase.hpp:31:18:virtual void MenuOverlayBase::buttonHowToPlayClicked()	0	static
 F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/containers/MenuOverlayBase.cpp:58:1:MenuOverlayBase::~MenuOverlayBase()	0	static
 F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/containers/MenuOverlayBase.cpp:63:6:virtual void MenuOverlayBase::initialize()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<MenuOverlayBase, const touchgfx::AbstractButton&>::~Callback()	0	static

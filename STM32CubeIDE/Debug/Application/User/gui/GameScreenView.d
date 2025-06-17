@@ -83,15 +83,17 @@ Application/User/gui/GameScreenView.o: \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/TetrominoJBase.hpp \
  ../../TouchGFX/gui/include/gui/containers/TetrominoL.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/TetrominoLBase.hpp \
- ../../TouchGFX/gui/include/gui/containers/MenuOverlay.hpp \
- ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/MenuOverlayBase.hpp \
+ ../../TouchGFX/gui/include/gui/containers/GameOverScreen.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/GameOverScreenBase.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
- ../../TouchGFX/gui/include/gui/containers/GameOverScreen.hpp \
- ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/GameOverScreenBase.hpp \
  ../../TouchGFX/gui/include/gui/containers/EnterName.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/EnterNameBase.hpp \
+ ../../TouchGFX/gui/include/gui/containers/MenuOverlay.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/MenuOverlayBase.hpp \
+ ../../TouchGFX/gui/include/gui/containers/HowToPlayOverlay.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/HowToPlayOverlayBase.hpp \
  ../../Core/Inc/main.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../../Core/Inc/stm32f4xx_hal_conf.h \
@@ -224,15 +226,17 @@ Application/User/gui/GameScreenView.o: \
 ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/TetrominoJBase.hpp:
 ../../TouchGFX/gui/include/gui/containers/TetrominoL.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/TetrominoLBase.hpp:
-../../TouchGFX/gui/include/gui/containers/MenuOverlay.hpp:
-../../TouchGFX/generated/gui_generated/include/gui_generated/containers/MenuOverlayBase.hpp:
+../../TouchGFX/gui/include/gui/containers/GameOverScreen.hpp:
+../../TouchGFX/generated/gui_generated/include/gui_generated/containers/GameOverScreenBase.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
-../../TouchGFX/gui/include/gui/containers/GameOverScreen.hpp:
-../../TouchGFX/generated/gui_generated/include/gui_generated/containers/GameOverScreenBase.hpp:
 ../../TouchGFX/gui/include/gui/containers/EnterName.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/EnterNameBase.hpp:
+../../TouchGFX/gui/include/gui/containers/MenuOverlay.hpp:
+../../TouchGFX/generated/gui_generated/include/gui_generated/containers/MenuOverlayBase.hpp:
+../../TouchGFX/gui/include/gui/containers/HowToPlayOverlay.hpp:
+../../TouchGFX/generated/gui_generated/include/gui_generated/containers/HowToPlayOverlayBase.hpp:
 ../../Core/Inc/main.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../../Core/Inc/stm32f4xx_hal_conf.h:

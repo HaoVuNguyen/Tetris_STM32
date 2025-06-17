@@ -6,6 +6,15 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_I1RP" Alignment="Center" TypographyId="Typography_01">
+        <Translation Language="GB">tetris</Translation>
+      </Text>
+      <Text Id="__SingleUse_R43B" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">return</Translation>
+      </Text>
+      <Text Id="__SingleUse_ETBX" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Place blocks to form complete rows&#10;Each row will earn you 100pt&#10;&#10;Use LEFT, RIGHT button to move the block&#10;to left and right&#10;Use MIDDLE button to rotate the block&#10;Use DOWN button to make the block&#10;go down faster&#10;&#10;&#10;GOOD LUCK!</Translation>
+      </Text>
       <Text Id="__SingleUse_ZFND" Alignment="Center" TypographyId="Typography_01">
         <Translation Language="GB">main menu</Translation>
       </Text>
@@ -72,20 +81,11 @@
       <Text Id="__SingleUse_T0UJ" Alignment="Center" TypographyId="Typography_00">
         <Translation Language="GB"> New game</Translation>
       </Text>
-      <Text Id="__SingleUse_0BGG" Alignment="Left" TypographyId="Typography_01">
+      <Text Id="levelArea" Alignment="Center" TypographyId="Level">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_P2CN" Alignment="Left" TypographyId="Typography_00">
         <Translation Language="GB">level</Translation>
-      </Text>
-      <Text Id="__SingleUse_93Z0" Alignment="Center" TypographyId="Typography_00">
-        <Translation Language="GB">return</Translation>
-      </Text>
-      <Text Id="__SingleUse_4OO6" Alignment="Center" TypographyId="Typography_03">
-        <Translation Language="GB">Place blocks to form complete rows&#10;Each row will earn you 100pt&#10;&#10;Use LEFT, RIGHT button to move the block&#10;to left and right&#10;Use MIDDLE button to rotate the block&#10;Use DOWN button to make the block&#10;go down faster&#10;&#10;&#10;GOOD LUCK!</Translation>
-      </Text>
-      <Text Id="__SingleUse_VGPF" Alignment="Center" TypographyId="Typography_01">
-        <Translation Language="GB">tetris</Translation>
       </Text>
       <Text Id="__SingleUse_YY7H" Alignment="Center" TypographyId="Typography_00">
         <Translation Language="GB"> restart</Translation>
@@ -102,7 +102,7 @@
       <Text Id="__SingleUse_H6WL" Alignment="Center" TypographyId="Typography_00">
         <Translation Language="GB">Next</Translation>
       </Text>
-      <Text Id="scoreArea" Alignment="Center" TypographyId="Typography_02">
+      <Text Id="scoreArea" Alignment="Center" TypographyId="Score">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_0IVO" Alignment="Center" TypographyId="Typography_00">
@@ -122,5 +122,7 @@
     <Typography Id="Typography_04" Font="font_8-bit-pusab.ttf" Size="17" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="gameoverscreenbutton" Font="font_8-bit-pusab.ttf" Size="8" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="LEADERBOARD" Font="font_8bit16.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Score" Font="ROGFonts-Regular.otf" Size="14" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="Level" Font="ROGFonts-Regular.otf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
   </Typographies>
 </TextDatabase>

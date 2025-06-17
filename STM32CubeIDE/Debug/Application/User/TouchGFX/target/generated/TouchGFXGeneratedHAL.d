@@ -96,15 +96,14 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/TetrominoJBase.hpp \
  ../../TouchGFX/gui/include/gui/containers/TetrominoL.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/TetrominoLBase.hpp \
- ../../TouchGFX/gui/include/gui/containers/MenuOverlay.hpp \
- ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/MenuOverlayBase.hpp \
  ../../TouchGFX/gui/include/gui/containers/GameOverScreen.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/GameOverScreenBase.hpp \
  ../../TouchGFX/gui/include/gui/containers/EnterName.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/EnterNameBase.hpp \
- ../../TouchGFX/gui/include/gui/howtoplayscreen_screen/HowToPlayScreenView.hpp \
- ../../TouchGFX/generated/gui_generated/include/gui_generated/howtoplayscreen_screen/HowToPlayScreenViewBase.hpp \
- ../../TouchGFX/gui/include/gui/howtoplayscreen_screen/HowToPlayScreenPresenter.hpp \
+ ../../TouchGFX/gui/include/gui/containers/MenuOverlay.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/MenuOverlayBase.hpp \
+ ../../TouchGFX/gui/include/gui/containers/HowToPlayOverlay.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/HowToPlayOverlayBase.hpp \
  ../../TouchGFX/gui/include/gui/leaderboardscreen_screen/LeaderboardScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/leaderboardscreen_screen/LeaderboardScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/leaderboardscreen_screen/LeaderboardScreenPresenter.hpp \
@@ -265,15 +264,14 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/TetrominoJBase.hpp:
 ../../TouchGFX/gui/include/gui/containers/TetrominoL.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/TetrominoLBase.hpp:
-../../TouchGFX/gui/include/gui/containers/MenuOverlay.hpp:
-../../TouchGFX/generated/gui_generated/include/gui_generated/containers/MenuOverlayBase.hpp:
 ../../TouchGFX/gui/include/gui/containers/GameOverScreen.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/GameOverScreenBase.hpp:
 ../../TouchGFX/gui/include/gui/containers/EnterName.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/EnterNameBase.hpp:
-../../TouchGFX/gui/include/gui/howtoplayscreen_screen/HowToPlayScreenView.hpp:
-../../TouchGFX/generated/gui_generated/include/gui_generated/howtoplayscreen_screen/HowToPlayScreenViewBase.hpp:
-../../TouchGFX/gui/include/gui/howtoplayscreen_screen/HowToPlayScreenPresenter.hpp:
+../../TouchGFX/gui/include/gui/containers/MenuOverlay.hpp:
+../../TouchGFX/generated/gui_generated/include/gui_generated/containers/MenuOverlayBase.hpp:
+../../TouchGFX/gui/include/gui/containers/HowToPlayOverlay.hpp:
+../../TouchGFX/generated/gui_generated/include/gui_generated/containers/HowToPlayOverlayBase.hpp:
 ../../TouchGFX/gui/include/gui/leaderboardscreen_screen/LeaderboardScreenView.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/leaderboardscreen_screen/LeaderboardScreenViewBase.hpp:
 ../../TouchGFX/gui/include/gui/leaderboardscreen_screen/LeaderboardScreenPresenter.hpp:

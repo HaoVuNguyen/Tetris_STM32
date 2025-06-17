@@ -73,8 +73,9 @@
               "TriggerComponent": "buttonNewGame"
             },
             "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "buttonNewGameClicked"
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "GameScreen"
             }
           },
           {
@@ -130,6 +131,15 @@
             }
           },
           {
+            "Type": "Container",
+            "Name": "gameAreaContainer",
+            "X": 5,
+            "Y": 35,
+            "Width": 140,
+            "Height": 280,
+            "Components": []
+          },
+          {
             "Type": "FlexButton",
             "Name": "buttonMenu",
             "X": 5,
@@ -149,23 +159,6 @@
           },
           {
             "Type": "TextArea",
-            "Name": "levelArea",
-            "X": 190,
-            "Y": 254,
-            "Width": 13,
-            "Height": 20,
-            "TextId": "__SingleUse_0BGG",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true,
-            "Wildcard1": {}
-          },
-          {
-            "Type": "TextArea",
             "Name": "levelText",
             "X": 166,
             "Y": 228,
@@ -179,6 +172,22 @@
               "Blue": 255
             },
             "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "levelArea",
+            "X": 150,
+            "Y": 255,
+            "Width": 87,
+            "Height": 30,
+            "TextId": "levelArea",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {}
           },
           {
             "Type": "TextArea",
@@ -309,6 +318,14 @@
           },
           {
             "Type": "CustomContainerInstance",
+            "Name": "gameOverScreen",
+            "Width": 240,
+            "Height": 320,
+            "Visible": false,
+            "CustomContainerDefinitionName": "GameOverScreen"
+          },
+          {
+            "Type": "CustomContainerInstance",
             "Name": "menuOverlay",
             "Width": 240,
             "Height": 320,
@@ -317,11 +334,11 @@
           },
           {
             "Type": "CustomContainerInstance",
-            "Name": "gameOverScreen",
+            "Name": "howToPlayOverlay",
             "Width": 240,
             "Height": 320,
             "Visible": false,
-            "CustomContainerDefinitionName": "GameOverScreen"
+            "CustomContainerDefinitionName": "HowToPlayOverlay"
           }
         ],
         "Interactions": [
@@ -334,76 +351,6 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "buttonMenuClicked"
-            }
-          }
-        ]
-      },
-      {
-        "Name": "HowToPlayScreen",
-        "Components": [
-          {
-            "Type": "TextArea",
-            "Name": "textArea1",
-            "X": 65,
-            "Y": 29,
-            "Width": 111,
-            "Height": 20,
-            "TextId": "__SingleUse_VGPF",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textArea2",
-            "X": 9,
-            "Y": 76,
-            "Width": 218,
-            "Height": 142,
-            "TextId": "__SingleUse_4OO6",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true,
-            "LineSpacing": 1,
-            "WideTextAction": 1
-          },
-          {
-            "Type": "ButtonWithLabel",
-            "Name": "buttonWithLabel1",
-            "X": 13,
-            "Y": 234,
-            "Width": 214,
-            "Height": 36,
-            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_round_action.png",
-            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_rounded_action.png",
-            "TextId": "__SingleUse_93Z0",
-            "PressedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "TextRotation": "0"
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "Interaction1",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonWithLabel1"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "GameScreen"
             }
           }
         ]
@@ -1259,9 +1206,8 @@
               "TriggerComponent": "buttonHowToPlay"
             },
             "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "HowToPlayScreen"
+              "Type": "ActionCustom",
+              "FunctionName": "buttonHowToPlayClicked"
             }
           },
           {
@@ -1340,7 +1286,7 @@
           {
             "Type": "TextArea",
             "Name": "textHighScore",
-            "X": 24,
+            "X": 34,
             "Y": 118,
             "Width": 176,
             "Height": 12,
@@ -1480,7 +1426,7 @@
           {
             "Type": "TextArea",
             "Name": "textArea1",
-            "X": 57,
+            "X": 60,
             "Y": 6,
             "Width": 116,
             "Height": 12,
@@ -1540,6 +1486,83 @@
           }
         ],
         "Interactions": []
+      },
+      {
+        "Name": "HowToPlayOverlay",
+        "Width": 240,
+        "Height": 320,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 240,
+            "Height": 320
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea2",
+            "X": 9,
+            "Y": 76,
+            "Width": 218,
+            "Height": 142,
+            "TextId": "__SingleUse_ETBX",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "LineSpacing": 1,
+            "WideTextAction": 1
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonReturn",
+            "X": 13,
+            "Y": 234,
+            "Width": 214,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_round_action.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_rounded_action.png",
+            "TextId": "__SingleUse_R43B",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 65,
+            "Y": 29,
+            "Width": 111,
+            "Height": 20,
+            "TextId": "__SingleUse_I1RP",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonReturn"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "buttonReturnClicked"
+            }
+          }
+        ]
       }
     ],
     "Name": "Tetris",

@@ -58,9 +58,9 @@ void MainMenuViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src
     if (&src == &buttonNewGame)
     {
         //Interaction1
-        //When buttonNewGame clicked call virtual function
-        //Call buttonNewGameClicked
-        buttonNewGameClicked();
+        //When buttonNewGame clicked change screen to GameScreen
+        //Go to GameScreen with no screen transition
+        application().gotoGameScreenScreenNoTransition();
     }
     if (&src == &buttonContinue)
     {

@@ -16,8 +16,6 @@
 #include <gui/mainmenu_screen/MainMenuPresenter.hpp>
 #include <gui/gamescreen_screen/GameScreenView.hpp>
 #include <gui/gamescreen_screen/GameScreenPresenter.hpp>
-#include <gui/howtoplayscreen_screen/HowToPlayScreenView.hpp>
-#include <gui/howtoplayscreen_screen/HowToPlayScreenPresenter.hpp>
 #include <gui/leaderboardscreen_screen/LeaderboardScreenView.hpp>
 #include <gui/leaderboardscreen_screen/LeaderboardScreenPresenter.hpp>
 
@@ -44,9 +42,8 @@ public:
      */
     typedef touchgfx::meta::TypeList< MainMenuView,
             touchgfx::meta::TypeList< GameScreenView,
-            touchgfx::meta::TypeList< HowToPlayScreenView,
             touchgfx::meta::TypeList< LeaderboardScreenView,
-            touchgfx::meta::Nil > > >
+            touchgfx::meta::Nil > >
             > GeneratedViewTypes;
 
     /**
@@ -60,9 +57,8 @@ public:
      */
     typedef touchgfx::meta::TypeList< MainMenuPresenter,
             touchgfx::meta::TypeList< GameScreenPresenter,
-            touchgfx::meta::TypeList< HowToPlayScreenPresenter,
             touchgfx::meta::TypeList< LeaderboardScreenPresenter,
-            touchgfx::meta::Nil > > >
+            touchgfx::meta::Nil > >
             > GeneratedPresenterTypes;
 
     /**

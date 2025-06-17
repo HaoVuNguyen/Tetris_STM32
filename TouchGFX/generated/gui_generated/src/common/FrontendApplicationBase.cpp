@@ -13,8 +13,6 @@
 #include <gui/mainmenu_screen/MainMenuPresenter.hpp>
 #include <gui/gamescreen_screen/GameScreenView.hpp>
 #include <gui/gamescreen_screen/GameScreenPresenter.hpp>
-#include <gui/howtoplayscreen_screen/HowToPlayScreenView.hpp>
-#include <gui/howtoplayscreen_screen/HowToPlayScreenPresenter.hpp>
 #include <gui/leaderboardscreen_screen/LeaderboardScreenView.hpp>
 #include <gui/leaderboardscreen_screen/LeaderboardScreenPresenter.hpp>
 
@@ -61,19 +59,6 @@ void FrontendApplicationBase::gotoGameScreenScreenNoTransition()
 void FrontendApplicationBase::gotoGameScreenScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<GameScreenView, GameScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
-}
-
-// HowToPlayScreen
-
-void FrontendApplicationBase::gotoHowToPlayScreenScreenNoTransition()
-{
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoHowToPlayScreenScreenNoTransitionImpl);
-    pendingScreenTransitionCallback = &transitionCallback;
-}
-
-void FrontendApplicationBase::gotoHowToPlayScreenScreenNoTransitionImpl()
-{
-    touchgfx::makeTransition<HowToPlayScreenView, HowToPlayScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
 // LeaderboardScreen

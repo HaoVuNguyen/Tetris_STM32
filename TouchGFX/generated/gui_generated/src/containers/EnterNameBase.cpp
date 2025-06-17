@@ -18,7 +18,7 @@ EnterNameBase::EnterNameBase()
     box1.setColor(touchgfx::Color::getColorFromRGB(254, 189, 23));
     add(box1);
 
-    textArea1.setXY(57, 6);
+    textArea1.setXY(60, 6);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea1.setLinespacing(0);
     textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_Q5ZN));

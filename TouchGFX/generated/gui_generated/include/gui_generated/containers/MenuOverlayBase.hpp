@@ -28,6 +28,10 @@ public:
     {
         // Override and implement this function in MenuOverlay
     }
+    virtual void buttonHowToPlayClicked()
+    {
+        // Override and implement this function in MenuOverlay
+    }
 
 protected:
     FrontendApplication& application() {

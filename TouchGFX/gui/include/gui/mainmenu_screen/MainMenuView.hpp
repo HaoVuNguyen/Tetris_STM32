@@ -12,7 +12,8 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
 
-    virtual void buttonNewGameClicked() override;
+    virtual void buttonContinueClicked() override;
+
 protected:
 };
 

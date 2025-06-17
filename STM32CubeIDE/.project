@@ -330,6 +330,11 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/containers/GameOverScreen.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/gui/HowToPlayOverlay.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/containers/HowToPlayOverlay.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/gui/MenuOverlay.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/containers/MenuOverlay.cpp</locationURI>
@@ -378,16 +383,6 @@
 			<name>Application/User/gui/GameScreenView.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/gui/HowToPlayScreenPresenter.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/howtoplayscreen_screen/HowToPlayScreenPresenter.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/gui/HowToPlayScreenView.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/howtoplayscreen_screen/HowToPlayScreenView.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/gui/LeaderboardScreenPresenter.cpp</name>
@@ -443,6 +438,11 @@
 			<name>Application/User/generated/Font_ROGFonts_Regular_otf_14_4bpp_0.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Font_ROGFonts_Regular_otf_14_4bpp_0.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Font_ROGFonts_Regular_otf_20_4bpp_0.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Font_ROGFonts_Regular_otf_20_4bpp_0.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/Font_font_8_bit_pusab_12_4bpp_0.cpp</name>
@@ -505,6 +505,11 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Kerning_ROGFonts_Regular_otf_14_4bpp.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/Kerning_ROGFonts_Regular_otf_20_4bpp.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Kerning_ROGFonts_Regular_otf_20_4bpp.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/Kerning_font_8_bit_pusab_12_4bpp.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Kerning_font_8_bit_pusab_12_4bpp.cpp</locationURI>
@@ -558,6 +563,11 @@
 			<name>Application/User/generated/Table_ROGFonts_Regular_otf_14_4bpp.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Table_ROGFonts_Regular_otf_14_4bpp.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Table_ROGFonts_Regular_otf_20_4bpp.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Table_ROGFonts_Regular_otf_20_4bpp.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/Table_font_8_bit_pusab_12_4bpp.cpp</name>
@@ -635,6 +645,11 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/containers/GameOverScreenBase.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/HowToPlayOverlayBase.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/containers/HowToPlayOverlayBase.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/MenuOverlayBase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/containers/MenuOverlayBase.cpp</locationURI>
@@ -678,11 +693,6 @@
 			<name>Application/User/generated/GameScreenViewBase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/HowToPlayScreenViewBase.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/howtoplayscreen_screen/HowToPlayScreenViewBase.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/LeaderboardScreenViewBase.cpp</name>

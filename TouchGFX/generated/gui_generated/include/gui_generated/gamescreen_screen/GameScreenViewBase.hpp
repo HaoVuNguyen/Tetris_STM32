@@ -8,9 +8,10 @@
 #include <mvp/View.hpp>
 #include <gui/gamescreen_screen/GameScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/containers/Container.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
-#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <gui/containers/TetrominoI.hpp>
 #include <gui/containers/TetrominoO.hpp>
@@ -19,8 +20,9 @@
 #include <gui/containers/TetrominoZ.hpp>
 #include <gui/containers/TetrominoJ.hpp>
 #include <gui/containers/TetrominoL.hpp>
-#include <gui/containers/MenuOverlay.hpp>
 #include <gui/containers/GameOverScreen.hpp>
+#include <gui/containers/MenuOverlay.hpp>
+#include <gui/containers/HowToPlayOverlay.hpp>
 
 class GameScreenViewBase : public touchgfx::View<GameScreenPresenter>
 {
@@ -48,9 +50,10 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box boxBorder;
     touchgfx::Box gameArea;
+    touchgfx::Container gameAreaContainer;
     touchgfx::IconButtonStyle< touchgfx::ClickButtonTrigger >  buttonMenu;
-    touchgfx::TextAreaWithOneWildcard levelArea;
     touchgfx::TextArea levelText;
+    touchgfx::TextAreaWithOneWildcard levelArea;
     touchgfx::TextArea scoreText;
     touchgfx::TextAreaWithOneWildcard scoreArea;
     touchgfx::TextArea nextText;
@@ -62,8 +65,9 @@ protected:
     TetrominoZ nextZ;
     TetrominoJ nextJ;
     TetrominoL nextL;
-    MenuOverlay menuOverlay;
     GameOverScreen gameOverScreen;
+    MenuOverlay menuOverlay;
+    HowToPlayOverlay howToPlayOverlay;
 
 private:
 

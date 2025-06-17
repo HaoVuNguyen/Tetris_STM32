@@ -24,6 +24,8 @@ struct Typography
     static const touchgfx::FontId TYPOGRAPHY_04 = 8;
     static const touchgfx::FontId GAMEOVERSCREENBUTTON = 9;
     static const touchgfx::FontId LEADERBOARD = 10;
+    static const touchgfx::FontId SCORE = 11;
+    static const touchgfx::FontId LEVEL = 12;
 };
 
 struct TypographyFontIndex
@@ -39,7 +41,9 @@ struct TypographyFontIndex
     static const touchgfx::FontId TYPOGRAPHY_04 = 8;        // font_8_bit_pusab_17_4bpp
     static const touchgfx::FontId GAMEOVERSCREENBUTTON = 9; // font_8_bit_pusab_8_4bpp
     static const touchgfx::FontId LEADERBOARD = 10;          // font_8bit16_20_4bpp
-    static const uint16_t NUMBER_OF_FONTS = 11;
+    static const touchgfx::FontId SCORE = 5;                // ROGFonts_Regular_otf_14_4bpp
+    static const touchgfx::FontId LEVEL = 11;                // ROGFonts_Regular_otf_20_4bpp
+    static const uint16_t NUMBER_OF_FONTS = 12;
 };
 
 class ApplicationFontProvider : public touchgfx::FontProvider

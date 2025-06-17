@@ -33,14 +33,19 @@ void GameScreenView::setupScreen()
     //srand((unsigned int)osKernelGetTickCount());
     for (int y = 0; y < 20; ++y) {
            for (int x = 0; x < 10; ++x) {
-               blocks[y][x].setPosition(5 + x * 14, 35 + y * 14,14,14); // đúng tọa độ trên gameArea
+               blocks[y][x].setPosition(x * 14, y * 14,14,14); // đúng tọa độ trên gameArea
                blocks[y][x].setVisible(false);
-               add(blocks[y][x]);
+               gameAreaContainer.add(blocks[y][x]);
+
+               lastArena[y][x] = 0;
            }
     }
 
     //srand((unsigned int)osKernelGetTickCount());
     TetrisEngine_Init();
+
+    TetrisEngine_LoadState();
+
     updateArenaOnScreen();
     //updateFallingTetromino();
     updateNextTetromino();
@@ -73,6 +78,10 @@ void GameScreenView::handleTickEvent(){
 		}
 	}
 
+	if (TetrisEngine_IsGameOver()){
+		gameOverScreen.setVisible(true);
+		gameOverScreen.invalidate();
+	}
 
 	TetrisButton btn;
 	while (osMessageQueueGet(buttonQueueHandle, &btn, NULL, 0) == osOK)
@@ -190,6 +199,7 @@ void GameScreenView::updateScoreAndLevel()
 
 void GameScreenView::buttonMenuClicked()
 {
+	TetrisEngine_SaveState();
     isPaused = true;  // Pause game logic
     menuOverlay.setVisible(true);
     menuOverlay.invalidate();  // Vẽ lại overlay
