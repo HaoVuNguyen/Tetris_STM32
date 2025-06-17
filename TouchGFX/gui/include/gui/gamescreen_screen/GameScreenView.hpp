@@ -24,6 +24,7 @@ public:
     void handleTickEvent();
     void updateArenaOnScreen();
     void updateNextTetromino();
+    void updateScoreAndLevel();
 
     void buttonMenuClicked();
     void resumeGame();
@@ -44,6 +45,9 @@ protected:
 
 	Container* currentTetrominoContainer = nullptr;
 	touchgfx::BoxWithBorder blocks[20][10]; // the game arena
+
+	Unicode::UnicodeChar scoreBuffer[7]; // ví dụ: "12345\0"
+	Unicode::UnicodeChar levelBuffer[2]; // ví dụ: "10\0"
 
 
 	bool isPaused = false;

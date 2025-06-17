@@ -68,6 +68,8 @@ void GameScreenView::handleTickEvent(){
 			updateArenaOnScreen();
 
 			updateNextTetromino();
+
+			updateScoreAndLevel();
 		}
 	}
 
@@ -81,6 +83,8 @@ void GameScreenView::handleTickEvent(){
 			updateArenaOnScreen();
 			//updateFallingTetromino();
 			updateNextTetromino();
+
+			updateScoreAndLevel();
 		}
 		else if (!TetrisEngine_IsGameOver() && !isNameComplete()) {
 			EnterName_HandleButton(btn);
@@ -164,6 +168,25 @@ void GameScreenView::updateNextTetromino()
     nextL.invalidate();
     nextJ.invalidate();
 }
+
+void GameScreenView::updateScoreAndLevel()
+{
+    // Lấy điểm và level từ engine
+    int score = TetrisEngine_GetScore();
+    int level = TetrisEngine_GetLevel();
+
+    // Chuyển sang Unicode string
+    Unicode::snprintf(scoreBuffer, sizeof(scoreBuffer), "%d", score);
+    Unicode::snprintf(levelBuffer, sizeof(levelBuffer), "%d", level);
+
+    // Gán vào wildcard
+    scoreArea.setWildcard(scoreBuffer);
+    scoreArea.invalidate();
+
+    levelArea.setWildcard(levelBuffer);
+    levelArea.invalidate();
+}
+
 
 void GameScreenView::buttonMenuClicked()
 {

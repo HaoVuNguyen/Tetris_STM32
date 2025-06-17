@@ -9,7 +9,7 @@
 #define T_WIDTH  4
 #define T_HEIGHT 4
 #define MAX_LEVEL 8
-#define POINT_PER_LEVEL 600
+#define POINT_PER_LEVEL 800
 #define NAME_LENGTH 3
 #define FLASH_SAVEGAME_ADDR      ((uint32_t)0x080E0100)
 
