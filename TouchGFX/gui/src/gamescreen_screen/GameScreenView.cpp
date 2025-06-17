@@ -2,7 +2,8 @@
 #include <touchgfx/hal/HAL.hpp>
 #include <cstdlib>
 #include <gui/containers/MenuOverlay.hpp>
-
+#include <gui/containers/HowToPlayOverlay.hpp>
+#include <gui/containers/GameOverScreen.hpp>
 
 extern "C"{
 #include "main.h"
@@ -28,7 +29,11 @@ void GameScreenView::setupScreen()
 	GameScreenViewBase::setupScreen();
 	menuOverlay.setResumeCallback(touchgfx::Callback<GameScreenView>(this, &GameScreenView::resumeGame));
 	menuOverlay.setRestartCallback(touchgfx::Callback<GameScreenView>(this, &GameScreenView::restartGame));
+	menuOverlay.setHowToPlayCallback(touchgfx::Callback<GameScreenView>(this, &GameScreenView::howToPlay));
 
+	howToPlayOverlay.setReturnCallback(touchgfx::Callback<GameScreenView>(this, &GameScreenView::destroyHowToPlay));
+
+	gameOverScreen.setRestartCallback(touchgfx::Callback<GameScreenView>(this, &GameScreenView::restartGame));
     // init 20x10 play field
     //srand((unsigned int)osKernelGetTickCount());
     for (int y = 0; y < 20; ++y) {
@@ -79,6 +84,7 @@ void GameScreenView::handleTickEvent(){
 	}
 
 	if (TetrisEngine_IsGameOver()){
+		gameOverScreen.setScore(TetrisEngine_GetScore());
 		gameOverScreen.setVisible(true);
 		gameOverScreen.invalidate();
 	}
@@ -219,6 +225,21 @@ void GameScreenView::restartGame()
 	menuOverlay.setVisible(false);
 	menuOverlay.invalidate();// Reset engine
 
+	gameOverScreen.setVisible(false);
+	gameOverScreen.invalidate();
+
 	updateArenaOnScreen();       // Cập nhật lại game state hiển thị
 	updateNextTetromino();       // Vẽ lại khối tiếp theo
+}
+
+void GameScreenView::howToPlay()
+{
+	howToPlayOverlay.setVisible(true);
+	howToPlayOverlay.invalidate();
+}
+
+void GameScreenView::destroyHowToPlay()
+{
+	howToPlayOverlay.setVisible(false);
+	howToPlayOverlay.invalidate();
 }

@@ -9,9 +9,14 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:501:18:virtual void touchgfx::Drawable::handleTickEvent()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	1
-../../TouchGFX/generated/gui_generated/include/gui_generated/containers/GameOverScreenBase.hpp:25:18:virtual void GameOverScreenBase::buttonRestartClicked()	1
-../../TouchGFX/gui/include/gui/containers/GameOverScreen.hpp:10:13:GameOverScreen::~GameOverScreen()	1
-../../TouchGFX/gui/include/gui/containers/GameOverScreen.hpp:10:13:virtual GameOverScreen::~GameOverScreen()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:459:18:bool touchgfx::Callback<dest_type, void, void, void>::isValid() const [with dest_type = GameScreenView]	3
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:449:18:void touchgfx::Callback<dest_type, void, void, void>::execute() [with dest_type = GameScreenView]	2
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/GameOverScreen.cpp:19:6:virtual void GameOverScreen::buttonRestartClicked()	2
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:touchgfx::Callback<GameScreenView>::~Callback()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:virtual touchgfx::Callback<GameScreenView>::~Callback()	1
+../../TouchGFX/gui/include/gui/containers/GameOverScreen.hpp:12:13:GameOverScreen::~GameOverScreen()	1
+../../TouchGFX/gui/include/gui/containers/GameOverScreen.hpp:12:13:virtual GameOverScreen::~GameOverScreen()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/GameOverScreen.cpp:3:1:GameOverScreen::GameOverScreen()	1
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/GameOverScreen.cpp:13:6:void GameOverScreen::setScore(int)	1
 F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/GameOverScreen.cpp:8:6:virtual void GameOverScreen::initialize()	1

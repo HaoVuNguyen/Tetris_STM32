@@ -9,9 +9,13 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:501:18:virtual void touchgfx::Drawable::handleTickEvent()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	4	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	0	static
-../../TouchGFX/generated/gui_generated/include/gui_generated/containers/HowToPlayOverlayBase.hpp:23:18:virtual void HowToPlayOverlayBase::buttonReturnClicked()	0	static
-../../TouchGFX/gui/include/gui/containers/HowToPlayOverlay.hpp:10:13:HowToPlayOverlay::~HowToPlayOverlay()	8	static
-../../TouchGFX/gui/include/gui/containers/HowToPlayOverlay.hpp:10:13:virtual HowToPlayOverlay::~HowToPlayOverlay()	8	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:459:18:bool touchgfx::Callback<dest_type, void, void, void>::isValid() const [with dest_type = GameScreenView]	0	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:449:18:void touchgfx::Callback<dest_type, void, void, void>::execute() [with dest_type = GameScreenView]	4	static
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/HowToPlayOverlay.cpp:13:6:virtual void HowToPlayOverlay::buttonReturnClicked()	8	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:touchgfx::Callback<GameScreenView>::~Callback()	0	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:virtual touchgfx::Callback<GameScreenView>::~Callback()	8	static
+../../TouchGFX/gui/include/gui/containers/HowToPlayOverlay.hpp:12:13:HowToPlayOverlay::~HowToPlayOverlay()	8	static
+../../TouchGFX/gui/include/gui/containers/HowToPlayOverlay.hpp:12:13:virtual HowToPlayOverlay::~HowToPlayOverlay()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/HowToPlayOverlay.cpp:3:1:HowToPlayOverlay::HowToPlayOverlay()	8	static
 F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/HowToPlayOverlay.cpp:8:6:virtual void HowToPlayOverlay::initialize()	0	static

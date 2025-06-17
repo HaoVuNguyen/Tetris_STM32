@@ -17,10 +17,17 @@ public:
 
     void buttonResumeClicked();
     void buttonRestartClicked();
+    void buttonHowToPlayClicked();
 
     //callback for button on screen
     touchgfx::Callback<GameScreenView> resumeCallback;
     touchgfx::Callback<GameScreenView> restartCallback;
+    touchgfx::Callback<GameScreenView> howToPlayCallback;
+
+    void setHowToPlayCallback(touchgfx::Callback<GameScreenView> cb)
+    {
+    	howToPlayCallback = cb;
+    }
 
     void setResumeCallback(touchgfx::Callback<GameScreenView> cb)
     {

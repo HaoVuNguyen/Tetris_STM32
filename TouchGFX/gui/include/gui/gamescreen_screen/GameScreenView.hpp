@@ -27,6 +27,10 @@ public:
     void updateScoreAndLevel();
 
     void buttonMenuClicked();
+
+    void howToPlay();
+    void destroyHowToPlay();
+
     void resumeGame();
     void restartGame();
 

@@ -60,7 +60,7 @@
       <Text Id="__SingleUse_K97O" Alignment="Left" TypographyId="Typography_00">
         <Translation Language="GB">New high score!!!</Translation>
       </Text>
-      <Text Id="__SingleUse_MXZX" Alignment="Left" TypographyId="Typography_02">
+      <Text Id="__SingleUse_MXZX" Alignment="Center" TypographyId="Score">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_50XG" Alignment="Left" TypographyId="Typography_04">
@@ -119,7 +119,7 @@
     <Typography Id="Typography_02" Font="ROGFonts-Regular.otf" Size="14" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Typography_03" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="gameover" Font="font_8-bit-pusab.ttf" Size="25" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Typography_04" Font="font_8-bit-pusab.ttf" Size="17" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_04" Font="font_8-bit-pusab.ttf" Size="17" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="a-z" />
     <Typography Id="gameoverscreenbutton" Font="font_8-bit-pusab.ttf" Size="8" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="LEADERBOARD" Font="font_8bit16.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Score" Font="ROGFonts-Regular.otf" Size="14" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />

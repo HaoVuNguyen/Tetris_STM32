@@ -25,3 +25,11 @@ void MenuOverlay::buttonRestartClicked()
         restartCallback.execute();  // Gọi về GameScreenView
     }
 }
+
+void MenuOverlay::buttonHowToPlayClicked()
+{
+    if (howToPlayCallback.isValid())
+    {
+        howToPlayCallback.execute();  // Gọi về GameScreenView
+    }
+}

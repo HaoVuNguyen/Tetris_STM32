@@ -1271,16 +1271,15 @@
           {
             "Type": "TextArea",
             "Name": "scoreArea",
-            "X": 117,
+            "X": 78,
             "Y": 86,
-            "Width": 6,
-            "Height": 15,
+            "Width": 87,
+            "Height": 19,
             "TextId": "__SingleUse_MXZX",
             "TextRotation": "0",
             "Color": {
               "Green": 255
             },
-            "AutoSize": true,
             "Wildcard1": {}
           },
           {

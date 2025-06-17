@@ -28,7 +28,7 @@ GameOverScreenBase::GameOverScreenBase() :
     textScore.setTypedText(touchgfx::TypedText(T___SINGLEUSE_50XG));
     add(textScore);
 
-    scoreArea.setXY(117, 86);
+    scoreArea.setPosition(78, 86, 87, 19);
     scoreArea.setColor(touchgfx::Color::getColorFromRGB(0, 255, 0));
     scoreArea.setLinespacing(0);
     scoreArea.setTypedText(touchgfx::TypedText(T___SINGLEUSE_MXZX));

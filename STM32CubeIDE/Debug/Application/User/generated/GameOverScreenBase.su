@@ -38,6 +38,7 @@ F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/contain
 F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/containers/GameOverScreenBase.cpp:73:1:virtual GameOverScreenBase::~GameOverScreenBase()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:43:5:touchgfx::TextArea::TextArea()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:132:10:void touchgfx::ButtonWithLabel::updateTextPosition()	24	static
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/containers/GameOverScreenBase.cpp:9:1:GameOverScreenBase::GameOverScreenBase()	88	static
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/containers/GameOverScreenBase.cpp:9:1:GameOverScreenBase::GameOverScreenBase()	96	static
