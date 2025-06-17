@@ -590,9 +590,10 @@ static void MX_GPIO_Init(void)
   //Init 4 button
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
-  GPIO_InitStruct.Pin = GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_10;
+  GPIO_InitStruct.Pin = GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_10 | GPIO_PIN_11;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
@@ -988,43 +989,27 @@ void LCD_Delay(uint32_t Delay)
 void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
-	static const uint16_t pins[4] = {GPIO_PIN_0, GPIO_PIN_1, GPIO_PIN_2, GPIO_PIN_10};
-	static const TetrisButton buttons[4] = {BUTTON_LEFT, BUTTON_RIGHT, BUTTON_ROTATE, BUTTON_DOWN};
+    static const uint16_t pins[4] = {GPIO_PIN_0, GPIO_PIN_1, GPIO_PIN_10, GPIO_PIN_11};
+    static const TetrisButton buttons[4] = {BUTTON_LEFT, BUTTON_RIGHT, BUTTON_ROTATE, BUTTON_DOWN};
 
-	static GPIO_PinState lastState[4] = {GPIO_PIN_RESET};
-	static uint32_t pressStartTick[4] = {0};
-	static uint32_t lastRepeatTick[4] = {0};
+    for(;;)
+    {
+        TetrisButton btnToSend = BUTTON_NONE;
 
+        for (int i = 0; i < 4; ++i)
+        {
+            GPIO_PinState state = HAL_GPIO_ReadPin(GPIOB, pins[i]);
 
-  /* Infinite loop */
-  for(;;)
-  {
-  uint32_t now = HAL_GetTick();
+            if (state == GPIO_PIN_SET) {
+                btnToSend = buttons[i];
+                break;  // Ưu tiên nút đầu tiên phát hiện được nhấn
+            }
+        }
 
-	 for (int i = 0; i < 4; ++i)
-	 {
-		 GPIO_PinState current = HAL_GPIO_ReadPin(GPIOB, pins[i]);
+        osMessageQueuePut(buttonQueueHandle, &btnToSend, 0, 0);
 
-		 if (current == GPIO_PIN_SET)
-		 {
-			 if (lastState[i] == GPIO_PIN_RESET) {
-				 // Nhấn lần đầu
-				 pressStartTick[i] = now;
-				 lastRepeatTick[i] = now;
-				 osMessageQueuePut(buttonQueueHandle, &buttons[i], 0, 0);
-			 } else if (now - pressStartTick[i] >= 100 &&
-						now - lastRepeatTick[i] >= 40) {
-				 // Đang giữ nút, auto repeat
-				 osMessageQueuePut(buttonQueueHandle, &buttons[i], 0, 0);
-				 lastRepeatTick[i] = now;
-			 }
-		 }
-
-		 lastState[i] = current;
-	 }
-    osDelay(5);
-  }
-  /* USER CODE END 5 */
+        osDelay(30); // Gửi input mỗi 30ms
+    }
 }
 
 /**

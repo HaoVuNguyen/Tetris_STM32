@@ -20,12 +20,16 @@ public:
     virtual ~GameScreenView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+
     void handleTickEvent();
-
-    void updateFallingTetromino();
     void updateArenaOnScreen();
-
     void updateNextTetromino();
+
+    void buttonMenuClicked();
+    void resumeGame();
+    void restartGame();
+
+    uint8_t lastArena[20][10];
 
 
     //void showCurrentFallingTetromino();
@@ -40,6 +44,9 @@ protected:
 
 	Container* currentTetrominoContainer = nullptr;
 	touchgfx::BoxWithBorder blocks[20][10]; // the game arena
+
+
+	bool isPaused = false;
 
 
 };

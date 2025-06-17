@@ -9,10 +9,14 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:501:18:virtual void touchgfx::Drawable::handleTickEvent()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	1
-../../TouchGFX/generated/gui_generated/include/gui_generated/containers/MenuOverlayBase.hpp:23:18:virtual void MenuOverlayBase::buttonResumeClicked()	1
-../../TouchGFX/generated/gui_generated/include/gui_generated/containers/MenuOverlayBase.hpp:27:18:virtual void MenuOverlayBase::buttonRestartClicked()	1
-../../TouchGFX/gui/include/gui/containers/MenuOverlay.hpp:10:13:MenuOverlay::~MenuOverlay()	1
-../../TouchGFX/gui/include/gui/containers/MenuOverlay.hpp:10:13:virtual MenuOverlay::~MenuOverlay()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:459:18:bool touchgfx::Callback<dest_type, void, void, void>::isValid() const [with dest_type = GameScreenView]	3
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:449:18:void touchgfx::Callback<dest_type, void, void, void>::execute() [with dest_type = GameScreenView]	2
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/MenuOverlay.cpp:13:6:virtual void MenuOverlay::buttonResumeClicked()	2
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/MenuOverlay.cpp:21:6:virtual void MenuOverlay::buttonRestartClicked()	2
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:touchgfx::Callback<GameScreenView>::~Callback()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:virtual touchgfx::Callback<GameScreenView>::~Callback()	1
+../../TouchGFX/gui/include/gui/containers/MenuOverlay.hpp:14:13:MenuOverlay::~MenuOverlay()	1
+../../TouchGFX/gui/include/gui/containers/MenuOverlay.hpp:14:13:virtual MenuOverlay::~MenuOverlay()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/MenuOverlay.cpp:3:1:MenuOverlay::MenuOverlay()	1
 F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/MenuOverlay.cpp:8:6:virtual void MenuOverlay::initialize()	1

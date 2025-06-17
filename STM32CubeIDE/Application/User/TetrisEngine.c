@@ -89,10 +89,21 @@ void TetrisEngine_OnButtonPress(TetrisButton button) {
     }
 }
 
+
 const uint8_t (*TetrisEngine_GetArena(void))[A_WIDTH] {
     static uint8_t displayBuffer[A_HEIGHT][A_WIDTH];
-    memcpy(displayBuffer, arena, sizeof(displayBuffer));
 
+    // ✅ Clear buffer trước (đảm bảo không giữ lại dữ liệu frame cũ)
+    memset(displayBuffer, 0, sizeof(displayBuffer));
+
+    // ✅ Copy khối đã gắn vào arena
+    for (int y = 0; y < A_HEIGHT; y++) {
+        for (int x = 0; x < A_WIDTH; x++) {
+            displayBuffer[y][x] = arena[y][x];
+        }
+    }
+
+    // ✅ Vẽ thêm khối đang rơi
     for (int y = 0; y < T_HEIGHT; y++) {
         for (int x = 0; x < T_WIDTH; x++) {
             int idx = rotate(x, y, currRotation);
@@ -101,12 +112,13 @@ const uint8_t (*TetrisEngine_GetArena(void))[A_WIDTH] {
             int ax = currX + x;
             int ay = currY + y;
             if (ax >= 0 && ax < A_WIDTH && ay >= 0 && ay < A_HEIGHT)
-                displayBuffer[ay][ax] = 1;
+                displayBuffer[ay][ax] = currTetrominoIdx + 1;
         }
     }
 
     return displayBuffer;
 }
+
 
 int TetrisEngine_GetCurrentTetrominoIdx(void) {
     return currTetrominoIdx;
@@ -128,8 +140,18 @@ int TetrisEngine_GetNextIndex(void) { return nextTetrominoIdx; }
 
 static void shuffleBag(void) {
     for (int i = 0; i < 7; i++) tetrominoBag[i] = i;
-    for (int i = 6; i > 0; i--) {
-        int j = rand() % (i + 1);
+// Trộn mảng theo chuỗi XOR đơn giản dựa trên tick đếm
+	static uint32_t seed = 0;
+	if (seed == 0) seed = osKernelGetTickCount(); // hoặc osKernelGetTickCount()
+
+	for (int i = 6; i > 0; i--) {
+		// Tạo chỉ số j từ seed pseudo-random: hạn chế dùng % trực tiếp
+		seed ^= seed << 13;
+		seed ^= seed >> 17;
+		seed ^= seed << 5;
+
+		int j = (seed & 0x7FFFFFFF) % (i + 1); // an toàn tuyệt đối
+
         int tmp = tetrominoBag[i];
         tetrominoBag[i] = tetrominoBag[j];
         tetrominoBag[j] = tmp;
@@ -158,7 +180,7 @@ static bool validPos(int tetromino, int rotation, int posX, int posY) {
             int ax = posX + x;
             int ay = posY + y;
             if (ax < 0 || ax >= A_WIDTH || ay >= A_HEIGHT) return false;
-            if (ay >= 0 && arena[ay][ax] == 1) return false;
+            if (ay >= 0 && arena[ay][ax] >= 1) return false;
         }
     }
     return true;
@@ -206,14 +228,17 @@ static void checkLines(void) {
             }
         }
         if (!full) continue;
+
         cleared++;
         for (int yy = y; yy > 0; yy--)
-            memcpy(arena[yy], arena[yy - 1], A_WIDTH);
-        memset(arena[0], 0, A_WIDTH);
-        y++;
+            memcpy(arena[yy], arena[yy - 1], sizeof(arena[0]));
+        memset(arena[0], 0, sizeof(arena[0]));
+        y++;  // Kiểm tra lại hàng mới được đẩy xuống
     }
+
     if (cleared > 0) score += 100 * cleared;
 }
+
 
 int TetrisEngine_GetLevel(void){
 	int level = 1 + score / POINT_PER_LEVEL;
@@ -225,15 +250,15 @@ uint32_t TetrisEngine_GetDropDelay(void){
 	int level = TetrisEngine_GetLevel();
 	switch (level)
 	{
-		case 1: return 740;
-		case 2: return 640;
-		case 3: return 540;
-		case 4: return 450;
-		case 5: return 400;
-		case 6: return 300;
-		case 7: return 200;
-		case 8: return 150;
-		default: return 740;
+		case 1: return 950;
+		case 2: return 850;
+		case 3: return 750;
+		case 4: return 650;
+		case 5: return 550;
+		case 6: return 450;
+		case 7: return 400;
+		case 8: return 300;
+		default: return 950;
 	}
 }
 
