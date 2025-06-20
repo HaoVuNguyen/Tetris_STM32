@@ -22,7 +22,7 @@ typedef enum {
 } TetrisButton;
 
 extern char playerName[NAME_LENGTH + 1];
-extern int currentCharIdx;
+extern uint8_t currentCharIndex;
 
 extern int tetrominoes[7][16];
 int rotate(int x, int y, int r);
@@ -67,7 +67,8 @@ bool TetrisEngine_HasValidSave(void);
 
 // For high score name input
 void EnterName_Init(void);
-void EnterName_HandleButton(TetrisButton button);
+void EnterName_SetNameFlag(bool flag);
+bool EnterName_GetNameFlag(void);
 bool isNameComplete(void);
 
 #endif

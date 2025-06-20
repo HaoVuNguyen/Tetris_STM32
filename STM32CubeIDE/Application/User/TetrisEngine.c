@@ -34,7 +34,8 @@ bool loadSave = false;
 
 // Name input
 char playerName[NAME_LENGTH + 1] = {'_', '_', '_', '\0'};
-int currentCharIndex = 0;
+uint8_t currentCharIndex = 0;
+static bool nameFlag = false;
 
 // Prototypes
 static void newTetromino(void);
@@ -328,10 +329,19 @@ bool TetrisEngine_HasValidSave(void) {
 }
 
 // Enter Name Feature
+void EnterName_SetNameFlag(bool flag){
+	nameFlag = flag;
+}
+
 void EnterName_Init(void) {
-    for (int i = 0; i < NAME_LENGTH; i++) playerName[i] = '_';
+    EnterName_SetNameFlag(false);
+	for (int i = 0; i < NAME_LENGTH; i++) playerName[i] = '_';
     playerName[NAME_LENGTH] = '\0';
     currentCharIndex = 0;
+}
+
+bool EnterName_GetNameFlag(void){
+	return nameFlag;
 }
 
 bool isNameComplete(void) {
@@ -341,41 +351,4 @@ bool isNameComplete(void) {
     return true;
 }
 
-void EnterName_HandleButton(TetrisButton button) {
-    switch (button) {
-        case BUTTON_LEFT:
-            if (playerName[currentCharIndex] == '_' || playerName[currentCharIndex] <= 'A')
-                playerName[currentCharIndex] = 'Z';
-            else
-                playerName[currentCharIndex]--;
-            break;
-
-        case BUTTON_RIGHT:
-            if (playerName[currentCharIndex] == '_' || playerName[currentCharIndex] >= 'Z')
-                playerName[currentCharIndex] = 'A';
-            else
-                playerName[currentCharIndex]++;
-            break;
-
-        case BUTTON_DOWN:
-            playerName[currentCharIndex] = '_';
-            if (currentCharIndex > 0)
-                currentCharIndex--;
-            break;
-
-        case BUTTON_ROTATE:
-            if (playerName[currentCharIndex] != '_') {
-                if (currentCharIndex < NAME_LENGTH - 1) {
-                    currentCharIndex++;
-                } else if (isNameComplete()) {
-                    // Leaderboard_AddScoreWithName(score, playerName);
-                    // Leaderboard_Save();
-                    // showGameOverScreen();
-                }
-            }
-            break;
-
-        default:
-            break;
-    }
-}
+\

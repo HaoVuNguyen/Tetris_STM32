@@ -590,9 +590,9 @@ static void MX_GPIO_Init(void)
   //Init 4 button
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
-  GPIO_InitStruct.Pin = GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_10 | GPIO_PIN_11;
+  GPIO_InitStruct.Pin = GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_0;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
 
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 
@@ -989,7 +989,7 @@ void LCD_Delay(uint32_t Delay)
 void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
-    static const uint16_t pins[4] = {GPIO_PIN_0, GPIO_PIN_1, GPIO_PIN_10, GPIO_PIN_11};
+    static const uint16_t pins[4] = {GPIO_PIN_12, GPIO_PIN_13, GPIO_PIN_14, GPIO_PIN_0};
     static const TetrisButton buttons[4] = {BUTTON_LEFT, BUTTON_RIGHT, BUTTON_ROTATE, BUTTON_DOWN};
 
     for(;;)
@@ -1008,8 +1008,9 @@ void StartDefaultTask(void *argument)
 
         osMessageQueuePut(buttonQueueHandle, &btnToSend, 0, 0);
 
-        osDelay(30); // Gửi input mỗi 30ms
+        osDelay(80); // Gửi input mỗi 30ms
     }
+
 }
 
 /**

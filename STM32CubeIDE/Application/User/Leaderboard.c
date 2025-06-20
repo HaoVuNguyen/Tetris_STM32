@@ -18,12 +18,15 @@ void Leaderboard_Init(void) {
     Leaderboard_Load();
 }
 
+bool Leaderboard_ShouldInitLeaderboard(void){
+	return !leaderboardInitFlag;
+}
+
 bool Leaderboard_IsNewHighScore(uint32_t score) {
     return score > entries[LEADERBOARD_SIZE - 1].score;
 }
 
-bool Leaderboard_AddScoreWithName(uint32_t score, const char* name) {
-    if (!Leaderboard_IsNewHighScore(score)) return false;
+void Leaderboard_AddScoreWithName(uint32_t score, char* name) {
 
     int insertPos = LEADERBOARD_SIZE;
     for (int i = 0; i < LEADERBOARD_SIZE; i++) {
@@ -40,9 +43,7 @@ bool Leaderboard_AddScoreWithName(uint32_t score, const char* name) {
         strncpy(entries[insertPos].name, name, NAME_LENGTH);
         entries[insertPos].name[NAME_LENGTH] = '\0';
         entries[insertPos].score = score;
-        return true;
     }
-    return false;
 }
 
 const LeaderboardEntry* Leaderboard_GetEntries(void) {

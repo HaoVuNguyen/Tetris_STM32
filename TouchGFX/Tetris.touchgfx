@@ -1428,6 +1428,44 @@
             "Alpha": 50
           },
           {
+            "Type": "FlexButton",
+            "Name": "flexButton1",
+            "Y": 80,
+            "Width": 240,
+            "Height": 100,
+            "Visible": false,
+            "Alpha": 20,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 240,
+                "Height": 100,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
             "Type": "Box",
             "Name": "box1",
             "Width": 240,
@@ -1468,11 +1506,10 @@
             "Name": "nameChar1",
             "X": 68,
             "Y": 40,
-            "Width": 17,
-            "Height": 17,
+            "Width": 25,
+            "Height": 25,
             "TextId": "__SingleUse_YMF3",
             "TextRotation": "0",
-            "AutoSize": true,
             "Wildcard1": {}
           },
           {
@@ -1480,11 +1517,10 @@
             "Name": "nameChar2",
             "X": 110,
             "Y": 40,
-            "Width": 17,
-            "Height": 17,
+            "Width": 25,
+            "Height": 25,
             "TextId": "__SingleUse_Z1YE",
             "TextRotation": "0",
-            "AutoSize": true,
             "Wildcard1": {}
           },
           {
@@ -1492,11 +1528,10 @@
             "Name": "nameChar3",
             "X": 152,
             "Y": 40,
-            "Width": 17,
-            "Height": 17,
+            "Width": 25,
+            "Height": 25,
             "TextId": "__SingleUse_Z41F",
             "TextRotation": "0",
-            "AutoSize": true,
             "Wildcard1": {}
           }
         ],

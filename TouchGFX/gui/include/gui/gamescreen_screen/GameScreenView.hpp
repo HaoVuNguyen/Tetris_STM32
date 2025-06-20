@@ -37,8 +37,6 @@ public:
 
     uint8_t lastArena[20][10];
 
-    void updateCurrNameChar();
-
 protected:
     TetrominoI tetrominoI;
 	TetrominoJ tetrominoJ;

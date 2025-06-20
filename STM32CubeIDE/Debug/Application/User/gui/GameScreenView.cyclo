@@ -13,18 +13,18 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
 F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:67:6:virtual void GameScreenView::tearDownScreen()	1
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:232:6:void GameScreenView::resumeGame()	1
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:258:6:void GameScreenView::howToPlay()	1
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:264:6:void GameScreenView::destroyHowToPlay()	1
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:224:6:virtual void GameScreenView::buttonMenuClicked()	1
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:272:6:void GameScreenView::resumeGame()	1
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:298:6:void GameScreenView::howToPlay()	1
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:304:6:void GameScreenView::destroyHowToPlay()	1
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:264:6:virtual void GameScreenView::buttonMenuClicked()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	3
 ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:21:13:GameScreenView::~GameScreenView()	2
 ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:21:13:virtual GameScreenView::~GameScreenView()	1
 F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:16:1:GameScreenView::GameScreenView()	3
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:130:6:void GameScreenView::updateArenaOnScreen()	13
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:170:6:void GameScreenView::updateNextTetromino()	8
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:239:6:void GameScreenView::restartGame()	1
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:205:6:void GameScreenView::updateScoreAndLevel()	1
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:72:6:virtual void GameScreenView::handleTickEvent()	11
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:170:6:void GameScreenView::updateArenaOnScreen()	13
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:210:6:void GameScreenView::updateNextTetromino()	8
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:279:6:void GameScreenView::restartGame()	1
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:245:6:void GameScreenView::updateScoreAndLevel()	1
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:72:6:virtual void GameScreenView::handleTickEvent()	24
 F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:27:6:virtual void GameScreenView::setupScreen()	4

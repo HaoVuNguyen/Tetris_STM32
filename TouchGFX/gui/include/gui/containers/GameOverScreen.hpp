@@ -15,6 +15,13 @@ public:
 
     void setScore(int score);
 
+    void showEnterNameOverlay();
+//    void drawEnterNameOverlay();
+    void showNewHighScoreText();
+    void destroyEnterNameOverlay();
+
+    void updateNameChar(uint8_t idx, char c);
+
     void buttonRestartClicked();
     touchgfx::Callback<GameScreenView> restartCallback;
     void setRestartCallback(touchgfx::Callback<GameScreenView> cb)

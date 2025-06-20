@@ -14,6 +14,14 @@ EnterNameBase::EnterNameBase()
     boxCoverButton.setAlpha(50);
     add(boxCoverButton);
 
+    flexButton1.setBoxWithBorderPosition(0, 0, 240, 100);
+    flexButton1.setBorderSize(5);
+    flexButton1.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    flexButton1.setAlpha(20);
+    flexButton1.setVisible(false);
+    flexButton1.setPosition(0, 80, 240, 100);
+    add(flexButton1);
+
     box1.setPosition(0, 0, 240, 80);
     box1.setColor(touchgfx::Color::getColorFromRGB(254, 189, 23));
     add(box1);
@@ -29,19 +37,19 @@ EnterNameBase::EnterNameBase()
     currChar.setAlpha(199);
     add(currChar);
 
-    nameChar1.setXY(68, 40);
+    nameChar1.setPosition(68, 40, 25, 25);
     nameChar1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     nameChar1.setLinespacing(0);
     nameChar1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YMF3));
     add(nameChar1);
 
-    nameChar2.setXY(110, 40);
+    nameChar2.setPosition(110, 40, 25, 25);
     nameChar2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     nameChar2.setLinespacing(0);
     nameChar2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_Z1YE));
     add(nameChar2);
 
-    nameChar3.setXY(152, 40);
+    nameChar3.setPosition(152, 40, 25, 25);
     nameChar3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     nameChar3.setLinespacing(0);
     nameChar3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_Z41F));

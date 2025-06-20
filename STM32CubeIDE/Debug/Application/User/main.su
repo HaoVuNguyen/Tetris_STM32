@@ -13,5 +13,5 @@ F:/Documents/TouchGFXProject/Tetris/Core/Src/main.c:913:6:LCD_IO_WriteData	16	st
 F:/Documents/TouchGFXProject/Tetris/Core/Src/main.c:929:6:LCD_IO_WriteReg	16	static
 F:/Documents/TouchGFXProject/Tetris/Core/Src/main.c:948:10:LCD_IO_ReadData	32	static
 F:/Documents/TouchGFXProject/Tetris/Core/Src/main.c:975:6:LCD_Delay	0	static
-F:/Documents/TouchGFXProject/Tetris/Core/Src/main.c:1023:6:HAL_TIM_PeriodElapsedCallback	0	static
-F:/Documents/TouchGFXProject/Tetris/Core/Src/main.c:1041:6:Error_Handler	0	static
+F:/Documents/TouchGFXProject/Tetris/Core/Src/main.c:1024:6:HAL_TIM_PeriodElapsedCallback	0	static
+F:/Documents/TouchGFXProject/Tetris/Core/Src/main.c:1042:6:Error_Handler	0	static

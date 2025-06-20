@@ -95,13 +95,12 @@ void GameScreenView::handleTickEvent(){
 		gameOverScreen.setScore(runScore);
 		gameOverScreen.setVisible(true);
 
-//		if (Leaderboard_IsNewHighScore(runScore))
-//		{
-//			gameOverScreen.textHighScore.setVisible(true);
-//			gameOverScreen.enterName.setVisible(true);
-//
-//
-//		}
+		if (Leaderboard_IsNewHighScore(runScore))
+		{
+			gameOverScreen.showNewHighScoreText();
+			if (!isNameComplete() && !EnterName_GetNameFlag())
+			gameOverScreen.showEnterNameOverlay();
+		}
 		gameOverScreen.invalidate();
 	}
 
@@ -117,9 +116,50 @@ void GameScreenView::handleTickEvent(){
 
 			updateScoreAndLevel();
 		}
-		else if (!TetrisEngine_IsGameOver() && !isNameComplete()) {
-			EnterName_HandleButton(btn);
+		else if (TetrisEngine_IsGameOver()) {
+			//EnterName_HandleButton(btn);
 			// Toan bo ham xu li nut dien ten o day
+			switch(btn){
+				case BUTTON_LEFT:
+					if (playerName[currentCharIndex] == '_' || playerName[currentCharIndex] <= 'a')
+						playerName[currentCharIndex] = 'z';
+					else
+						playerName[currentCharIndex]--;
+					gameOverScreen.updateNameChar(currentCharIndex, playerName[currentCharIndex]);
+					break;
+				case BUTTON_RIGHT:
+					if (playerName[currentCharIndex] == '_' || playerName[currentCharIndex] >= 'z')
+						playerName[currentCharIndex] = 'a';
+					else
+						playerName[currentCharIndex]++;
+					gameOverScreen.updateNameChar(currentCharIndex, playerName[currentCharIndex]);
+					break;
+				case BUTTON_DOWN:
+					playerName[currentCharIndex] = '_';
+					gameOverScreen.updateNameChar(currentCharIndex, playerName[currentCharIndex]);
+					if (currentCharIndex > 0)
+						currentCharIndex--;
+					gameOverScreen.updateNameChar(currentCharIndex, playerName[currentCharIndex]);
+					break;
+				case BUTTON_ROTATE:
+		            if (playerName[currentCharIndex] != '_') {
+		                if (currentCharIndex < NAME_LENGTH - 1) {
+		                    currentCharIndex++;
+		                }
+		                if (isNameComplete()) {
+		                    EnterName_SetNameFlag(true);
+		                	Leaderboard_AddScoreWithName(runScore, playerName);
+		                    // Leaderboard_Save();
+		                    gameOverScreen.destroyEnterNameOverlay();
+		                    gameOverScreen.invalidate();
+		                }
+		            }
+		            break;
+				case BUTTON_NONE:
+					break;
+				default:
+					break;
+			}
 
 		}
 	}
@@ -267,8 +307,3 @@ void GameScreenView::destroyHowToPlay()
 	howToPlayOverlay.invalidate();
 }
 
-void GameScreenView::updateCurrNameChar()
-{
-//	gameOverScreen.enterName.currChar.setPosition(64 + currentCharIdx * 42, 21, 28);
-//	gameOverScreen.enterName.currChar.invalidate();
-}
