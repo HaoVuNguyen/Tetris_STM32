@@ -6,6 +6,9 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_WLR4" Alignment="Center" TypographyId="LEADERBOARD">
+        <Translation Language="GB">&lt;value&gt; - &lt;value&gt;</Translation>
+      </Text>
       <Text Id="__SingleUse_I1RP" Alignment="Center" TypographyId="Typography_01">
         <Translation Language="GB">tetris</Translation>
       </Text>
@@ -121,7 +124,7 @@
     <Typography Id="gameover" Font="font_8-bit-pusab.ttf" Size="25" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Typography_04" Font="font_8-bit-pusab.ttf" Size="17" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="a-z,A-Z" />
     <Typography Id="gameoverscreenbutton" Font="font_8-bit-pusab.ttf" Size="8" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="LEADERBOARD" Font="font_8bit16.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="LEADERBOARD" Font="ROGFonts-Regular.otf" Size="22" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="a-z,A-Z,0-9" />
     <Typography Id="Score" Font="ROGFonts-Regular.otf" Size="14" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
     <Typography Id="Level" Font="ROGFonts-Regular.otf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
   </Typographies>

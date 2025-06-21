@@ -22,8 +22,8 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:127:18:virtual void touchgfx::TextArea::setXBaselineY(int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:403:41:virtual const touchgfx::Unicode::UnicodeChar* touchgfx::TextArea::getWildcard2() const	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:84:41:virtual const touchgfx::Unicode::UnicodeChar* touchgfx::TextAreaWithOneWildcard::getWildcard1() const	1
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/containers/EnterNameBase.cpp:59:1:EnterNameBase::~EnterNameBase()	1
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/containers/EnterNameBase.cpp:64:6:virtual void EnterNameBase::initialize()	1
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/containers/EnterNameBase.cpp:58:1:EnterNameBase::~EnterNameBase()	1
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/containers/EnterNameBase.cpp:63:6:virtual void EnterNameBase::initialize()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:123:18:void touchgfx::BoxWithBorderButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::ClickButtonTrigger]	3
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	1
@@ -34,7 +34,7 @@ F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/contain
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:virtual touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:virtual touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	1
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/containers/EnterNameBase.cpp:59:1:virtual EnterNameBase::~EnterNameBase()	1
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/generated/gui_generated/src/containers/EnterNameBase.cpp:58:1:virtual EnterNameBase::~EnterNameBase()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:99:18:virtual void touchgfx::AbstractButtonContainer::executeAction()	3

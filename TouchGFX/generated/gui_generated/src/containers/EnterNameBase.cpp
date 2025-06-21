@@ -18,7 +18,6 @@ EnterNameBase::EnterNameBase()
     flexButton1.setBorderSize(5);
     flexButton1.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
     flexButton1.setAlpha(20);
-    flexButton1.setVisible(false);
     flexButton1.setPosition(0, 80, 240, 100);
     add(flexButton1);
 

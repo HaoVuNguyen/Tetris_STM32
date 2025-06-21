@@ -116,7 +116,7 @@ void GameScreenView::handleTickEvent(){
 
 			updateScoreAndLevel();
 		}
-		else if (TetrisEngine_IsGameOver()) {
+		else if (TetrisEngine_IsGameOver() && Leaderboard_IsNewHighScore(runScore) && !EnterName_GetNameFlag()) {
 			//EnterName_HandleButton(btn);
 			// Toan bo ham xu li nut dien ten o day
 			switch(btn){
@@ -135,23 +135,33 @@ void GameScreenView::handleTickEvent(){
 					gameOverScreen.updateNameChar(currentCharIndex, playerName[currentCharIndex]);
 					break;
 				case BUTTON_DOWN:
-					playerName[currentCharIndex] = '_';
-					gameOverScreen.updateNameChar(currentCharIndex, playerName[currentCharIndex]);
-					if (currentCharIndex > 0)
-						currentCharIndex--;
-					gameOverScreen.updateNameChar(currentCharIndex, playerName[currentCharIndex]);
+//					playerName[currentCharIndex] = '_';
+//					gameOverScreen.updateNameChar(currentCharIndex, playerName[currentCharIndex]);
+//					if (currentCharIndex > 0)
+//						currentCharIndex--;
+//					gameOverScreen.updateNameChar(currentCharIndex, playerName[currentCharIndex]);
 					break;
 				case BUTTON_ROTATE:
-		            if (playerName[currentCharIndex] != '_') {
+
+					if (playerName[currentCharIndex] != '_') {
 		                if (currentCharIndex < NAME_LENGTH - 1) {
 		                    currentCharIndex++;
+		                    gameOverScreen.updateNameChar(currentCharIndex, playerName[currentCharIndex]);
 		                }
 		                if (isNameComplete()) {
-		                    EnterName_SetNameFlag(true);
-		                	Leaderboard_AddScoreWithName(runScore, playerName);
-		                    // Leaderboard_Save();
-		                    gameOverScreen.destroyEnterNameOverlay();
-		                    gameOverScreen.invalidate();
+		                	if (!EnterName_GetNameFlag()){
+								EnterName_SetNameFlag(true);
+								uint8_t pos = Leaderboard_AddScoreWithName(runScore, playerName);
+
+
+								//const LeaderboardEntry* entries = Leaderboard_GetEntries();
+
+								// Leaderboard_Save();
+								gameOverScreen.updatePlayerInfo(entries[pos].score, entries[pos].name);
+
+								gameOverScreen.destroyEnterNameOverlay();
+								gameOverScreen.invalidate();
+		                	}
 		                }
 		            }
 		            break;
@@ -284,6 +294,9 @@ void GameScreenView::restartGame()
 	menuOverlay.setVisible(false);
 	menuOverlay.invalidate();// Reset engine
 
+	for (int i = 2; i>=0 ; i--){
+		gameOverScreen.updateNameChar(i, playerName[i]);
+	}
 	gameOverScreen.setVisible(false);
 
 //	gameOverScreen.textHighScore.setVisible(false);

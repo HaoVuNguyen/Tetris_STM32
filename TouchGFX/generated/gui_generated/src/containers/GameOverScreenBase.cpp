@@ -65,6 +65,13 @@ GameOverScreenBase::GameOverScreenBase() :
     buttonLeaderboard.setAction(buttonCallback);
     add(buttonLeaderboard);
 
+    playerInfo.setPosition(21, 135, 200, 25);
+    playerInfo.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    playerInfo.setLinespacing(0);
+    playerInfo.setTypedText(touchgfx::TypedText(T___SINGLEUSE_WLR4));
+    playerInfo.setVisible(false);
+    add(playerInfo);
+
     enterName.setXY(0, 139);
     enterName.setVisible(false);
     add(enterName);

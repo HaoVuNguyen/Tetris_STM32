@@ -13,7 +13,7 @@ MainMenuView::MainMenuView()
 void MainMenuView::setupScreen()
 {
 	MainMenuViewBase::setupScreen();
-
+	if (Leaderboard_ShouldInitLeaderboard())
 	Leaderboard_Init();
 
 	if (TetrisEngine_IsGameOngoing()) {

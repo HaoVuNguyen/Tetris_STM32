@@ -11,7 +11,6 @@
 #define MAX_LEVEL 8
 #define POINT_PER_LEVEL 800
 #define NAME_LENGTH 3
-#define FLASH_SAVEGAME_ADDR      ((uint32_t)0x080E0100)
 
 typedef enum {
     BUTTON_NONE = 0,
@@ -24,7 +23,7 @@ typedef enum {
 extern char playerName[NAME_LENGTH + 1];
 extern uint8_t currentCharIndex;
 
-extern int tetrominoes[7][16];
+extern uint8_t tetrominoes[7][16];
 int rotate(int x, int y, int r);
 
 void TetrisEngine_Init(void);
@@ -35,24 +34,24 @@ uint32_t TetrisEngine_GetDropDelay(void);
 
 const uint8_t (*TetrisEngine_GetArena(void))[A_WIDTH];
 
-int TetrisEngine_GetCurrentTetrominoIdx(void);
-int TetrisEngine_GetCurrentRotation(void);
-int TetrisEngine_GetCurrentX(void);
-int TetrisEngine_GetCurrentY(void);
+int8_t TetrisEngine_GetCurrentTetrominoIdx(void);
+int8_t TetrisEngine_GetCurrentRotation(void);
+int8_t TetrisEngine_GetCurrentX(void);
+int8_t TetrisEngine_GetCurrentY(void);
 uint32_t TetrisEngine_GetScore(void);
 bool TetrisEngine_IsGameOver(void);
 bool TetrisEngine_IsGameOngoing(void);
-int TetrisEngine_GetNextIndex(void);
+int8_t TetrisEngine_GetNextIndex(void);
 
 // New for Save/Load and Leaderboard
 typedef struct {
     int arena[A_HEIGHT][A_WIDTH];
-    int currTetrominoIdx;
-    int currRotation;
-    int currX;
-    int currY;
-    int nextTetrominoIdx;
-    uint32_t score;
+    int8_t currTetrominoIdx;
+    int8_t currRotation;
+    int8_t currX;
+    int8_t currY;
+    int8_t nextTetrominoIdx;
+    int32_t score;
     bool gameOver;
     bool gameStarted;
     uint32_t crc; // check valid

@@ -4,7 +4,7 @@
 #include <string.h>
 
 // --- Tetris Core Definitions ---
-int tetrominoes[7][16] = {
+uint8_t tetrominoes[7][16] = {
     {0,0,0,0, 1,1,1,1, 0,0,0,0, 0,0,0,0},  // I
     {0,0,0,0, 0,1,1,0, 0,1,1,0, 0,0,0,0},  // O
     {0,0,0,0, 0,0,1,1, 0,1,1,0, 0,0,0,0},  // S
@@ -19,14 +19,14 @@ static uint32_t score = 0;
 static bool gameOver = false;
 static bool gameStarted = false;
 
-static int tetrominoBag[7];
-static int bagIndex = 0;
+static int8_t tetrominoBag[7];
+static int8_t bagIndex = 0;
 
-static int currTetrominoIdx = 0;
-static int currRotation = 0;
-static int currX = 0;
-static int currY = 0;
-static int nextTetrominoIdx = 0;
+static int8_t currTetrominoIdx = 0;
+static int8_t currRotation = 0;
+static int8_t currX = 0;
+static int8_t currY = 0;
+static int8_t nextTetrominoIdx = 0;
 
 static TetrisSaveState savedState;
 static bool hasSavedState = false;
@@ -130,23 +130,23 @@ const uint8_t (*TetrisEngine_GetArena(void))[A_WIDTH] {
 }
 
 
-int TetrisEngine_GetCurrentTetrominoIdx(void) {
+int8_t TetrisEngine_GetCurrentTetrominoIdx(void) {
     return currTetrominoIdx;
 }
-int TetrisEngine_GetCurrentRotation(void) {
+int8_t TetrisEngine_GetCurrentRotation(void) {
     return currRotation;
 }
-int TetrisEngine_GetCurrentX(void) {
+int8_t TetrisEngine_GetCurrentX(void) {
     return currX;
 }
-int TetrisEngine_GetCurrentY(void) {
+int8_t TetrisEngine_GetCurrentY(void) {
     return currY;
 }
 
 uint32_t TetrisEngine_GetScore(void) { return score; }
 bool TetrisEngine_IsGameOver(void) { return gameOver; }
 bool TetrisEngine_IsGameOngoing(void) { return gameStarted && !gameOver; }
-int TetrisEngine_GetNextIndex(void) { return nextTetrominoIdx; }
+int8_t TetrisEngine_GetNextIndex(void) { return nextTetrominoIdx; }
 
 static void shuffleBag(void) {
     for (int i = 0; i < 7; i++) tetrominoBag[i] = i;

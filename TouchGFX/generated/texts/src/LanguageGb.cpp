@@ -10,6 +10,7 @@ KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE;
 // Remap all strings
 TEXT_LOCATION_FLASH_PRAGMA
 KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
+    224, // T___SINGLEUSE_WLR4: "<> - <>"
     367, // T___SINGLEUSE_I1RP: "tetris"
     360, // T___SINGLEUSE_R43B: "return"
     0,   // T___SINGLEUSE_ETBX: "Place blocks to form complete rows\nEach row will earn you 100pt\n\nUse LEFT, RIGHT button to move the block\nto left and right\nUse MIDDLE button to rotate the block\nUse DOWN button to make the block\ngo down faster\n\n\nGOOD LUCK!"

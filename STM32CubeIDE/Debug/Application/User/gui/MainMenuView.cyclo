@@ -7,4 +7,4 @@ F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/mainmenu_screen/MainMenuVie
 ../../TouchGFX/gui/include/gui/mainmenu_screen/MainMenuView.hpp:11:13:MainMenuView::~MainMenuView()	1
 ../../TouchGFX/gui/include/gui/mainmenu_screen/MainMenuView.hpp:11:13:virtual MainMenuView::~MainMenuView()	1
 F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/mainmenu_screen/MainMenuView.cpp:8:1:MainMenuView::MainMenuView()	1
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/mainmenu_screen/MainMenuView.cpp:13:6:virtual void MainMenuView::setupScreen()	1
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/mainmenu_screen/MainMenuView.cpp:13:6:virtual void MainMenuView::setupScreen()	2

@@ -398,9 +398,9 @@
           {
             "Type": "TextArea",
             "Name": "highScore1",
-            "X": 40,
+            "X": 20,
             "Y": 60,
-            "Width": 160,
+            "Width": 200,
             "Height": 25,
             "TextId": "__SingleUse_ORZS",
             "TextRotation": "0",
@@ -414,9 +414,9 @@
           {
             "Type": "TextArea",
             "Name": "highScore3",
-            "X": 40,
-            "Y": 140,
-            "Width": 160,
+            "X": 20,
+            "Y": 141,
+            "Width": 200,
             "Height": 25,
             "TextId": "__SingleUse_2MJY",
             "TextRotation": "0",
@@ -430,9 +430,9 @@
           {
             "Type": "TextArea",
             "Name": "highScore4",
-            "X": 40,
+            "X": 20,
             "Y": 180,
-            "Width": 160,
+            "Width": 200,
             "Height": 25,
             "TextId": "__SingleUse_CZRL",
             "TextRotation": "0",
@@ -447,9 +447,9 @@
           {
             "Type": "TextArea",
             "Name": "highScore5",
-            "X": 40,
+            "X": 20,
             "Y": 221,
-            "Width": 160,
+            "Width": 200,
             "Height": 25,
             "TextId": "__SingleUse_XSST",
             "TextRotation": "0",
@@ -463,9 +463,9 @@
           {
             "Type": "TextArea",
             "Name": "highScore2",
-            "X": 40,
+            "X": 20,
             "Y": 100,
-            "Width": 160,
+            "Width": 200,
             "Height": 25,
             "TextId": "__SingleUse_TS20",
             "TextRotation": "0",
@@ -1367,6 +1367,24 @@
             "TextRotation": "0"
           },
           {
+            "Type": "TextArea",
+            "Name": "playerInfo",
+            "X": 21,
+            "Y": 135,
+            "Width": 200,
+            "Height": 25,
+            "Visible": false,
+            "TextId": "__SingleUse_WLR4",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {},
+            "Wildcard2": {}
+          },
+          {
             "Type": "CustomContainerInstance",
             "Name": "enterName",
             "Y": 139,
@@ -1433,7 +1451,6 @@
             "Y": 80,
             "Width": 240,
             "Height": 100,
-            "Visible": false,
             "Alpha": 20,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"

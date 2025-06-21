@@ -1,7 +1,5 @@
 ../Application/User/Leaderboard.c:10:6:Leaderboard_Init	3
-../Application/User/Leaderboard.c:21:6:Leaderboard_ShouldInitLeaderboard	1
-../Application/User/Leaderboard.c:25:6:Leaderboard_IsNewHighScore	1
-../Application/User/Leaderboard.c:29:6:Leaderboard_AddScoreWithName	3
-../Application/User/Leaderboard.c:49:25:Leaderboard_GetEntries	1
-../Application/User/Leaderboard.c:53:6:Leaderboard_Save	1
-../Application/User/Leaderboard.c:58:6:Leaderboard_Load	1
+../Application/User/Leaderboard.c:20:6:Leaderboard_ShouldInitLeaderboard	1
+../Application/User/Leaderboard.c:24:6:Leaderboard_IsNewHighScore	1
+../Application/User/Leaderboard.c:28:9:Leaderboard_AddScoreWithName	3
+../Application/User/Leaderboard.c:50:25:Leaderboard_GetEntries	1

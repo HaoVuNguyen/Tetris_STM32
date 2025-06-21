@@ -21,6 +21,7 @@ public:
     void destroyEnterNameOverlay();
 
     void updateNameChar(uint8_t idx, char c);
+    void updatePlayerInfo(uint32_t score, char* name);
 
     void buttonRestartClicked();
     touchgfx::Callback<GameScreenView> restartCallback;
@@ -31,6 +32,9 @@ public:
 
 protected:
     Unicode::UnicodeChar scoreBuffer[10];
+
+    Unicode::UnicodeChar playerScoreBuffer[7];
+    Unicode::UnicodeChar playerNameBuffer[4];
 };
 
 #endif // GAMEOVERSCREEN_HPP

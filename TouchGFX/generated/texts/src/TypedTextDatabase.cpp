@@ -15,7 +15,7 @@ extern touchgfx::GeneratedFont& getFont_verdana_10_4bpp();
 extern touchgfx::GeneratedFont& getFont_font_8_bit_pusab_25_4bpp();
 extern touchgfx::GeneratedFont& getFont_font_8_bit_pusab_17_4bpp();
 extern touchgfx::GeneratedFont& getFont_font_8_bit_pusab_8_4bpp();
-extern touchgfx::GeneratedFont& getFont_font_8bit16_20_4bpp();
+extern touchgfx::GeneratedFont& getFont_ROGFonts_Regular_otf_22_4bpp();
 extern touchgfx::GeneratedFont& getFont_ROGFonts_Regular_otf_20_4bpp();
 
 const touchgfx::Font* touchgfx_fonts[] = {
@@ -29,7 +29,7 @@ const touchgfx::Font* touchgfx_fonts[] = {
     &(getFont_font_8_bit_pusab_25_4bpp()),
     &(getFont_font_8_bit_pusab_17_4bpp()),
     &(getFont_font_8_bit_pusab_8_4bpp()),
-    &(getFont_font_8bit16_20_4bpp()),
+    &(getFont_ROGFonts_Regular_otf_22_4bpp()),
     &(getFont_ROGFonts_Regular_otf_20_4bpp())
 };
 
@@ -38,6 +38,7 @@ extern const touchgfx::TypedText::TypedTextData* const typedTextDatabaseArray[];
 
 TEXT_LOCATION_FLASH_PRAGMA
 const touchgfx::TypedText::TypedTextData typedText_database_DEFAULT[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
+    { 10, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
     { 4, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
     { 3, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
     { 6, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
@@ -138,7 +139,7 @@ void resetFont(touchgfx::FontId fontId)
         touchgfx_fonts[9] = &(getFont_font_8_bit_pusab_8_4bpp());
         break;
     case 10:
-        touchgfx_fonts[10] = &(getFont_font_8bit16_20_4bpp());
+        touchgfx_fonts[10] = &(getFont_ROGFonts_Regular_otf_22_4bpp());
         break;
     case 11:
         touchgfx_fonts[11] = &(getFont_ROGFonts_Regular_otf_20_4bpp());

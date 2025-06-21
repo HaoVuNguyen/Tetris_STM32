@@ -43,6 +43,7 @@ protected:
     touchgfx::ButtonWithLabel buttonMainMenu;
     touchgfx::ButtonWithLabel buttonRestart;
     touchgfx::ButtonWithLabel buttonLeaderboard;
+    touchgfx::TextAreaWithTwoWildcards playerInfo;
     EnterName enterName;
 
 private:
