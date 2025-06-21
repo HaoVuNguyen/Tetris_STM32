@@ -41,27 +41,27 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  18 TouchGFX_Framebuffer 00070800  d0000000  d0000000  00069000  2**2
                   ALLOC
- 19 .debug_line   0007da05  00000000  00000000  00068430  2**0
+ 19 .debug_line   0007da04  00000000  00000000  00068430  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_line_str 00000066  00000000  00000000  000e5e35  2**0
+ 20 .debug_line_str 00000066  00000000  00000000  000e5e34  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_info   00163146  00000000  00000000  000e5e9b  2**0
+ 21 .debug_info   001630f1  00000000  00000000  000e5e9a  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_abbrev 000290ba  00000000  00000000  00248fe1  2**0
+ 22 .debug_abbrev 000290a6  00000000  00000000  00248f8b  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 23 .debug_aranges 000047a8  00000000  00000000  002720a0  2**3
+ 23 .debug_aranges 000047a8  00000000  00000000  00272038  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 24 .debug_str    001180bd  00000000  00000000  00276848  2**0
+ 24 .debug_str    00118050  00000000  00000000  002767e0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 25 .debug_rnglists 00005509  00000000  00000000  0038e905  2**0
+ 25 .debug_rnglists 00005509  00000000  00000000  0038e830  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 26 .debug_loclists 00021c0c  00000000  00000000  00393e0e  2**0
+ 26 .debug_loclists 00021c0c  00000000  00000000  00393d39  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 27 .debug_macro  00017fd2  00000000  00000000  003b5a1a  2**0
+ 27 .debug_macro  00017fcc  00000000  00000000  003b5945  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 28 .comment      000000c2  00000000  00000000  003cd9ec  2**0
+ 28 .comment      000000c2  00000000  00000000  003cd911  2**0
                   CONTENTS, READONLY
- 29 .debug_frame  0000b9a0  00000000  00000000  003cdab0  2**2
+ 29 .debug_frame  0000b9a0  00000000  00000000  003cd9d4  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -703,18 +703,18 @@ uint8_t Leaderboard_AddScoreWithName(uint32_t score, char* name) {
  8000724:	20000420 	.word	0x20000420
 
 08000728 <shuffleBag>:
-uint32_t TetrisEngine_GetScore(void) { return score; }
-bool TetrisEngine_IsGameOver(void) { return gameOver; }
-bool TetrisEngine_IsGameOngoing(void) { return gameStarted && !gameOver; }
-int8_t TetrisEngine_GetNextIndex(void) { return nextTetrominoIdx; }
+	return nextTetrominoIdx;
+}
+
+//  --------GAME MECHANIC FUNCTION---------
 
 static void shuffleBag(void) {
  8000728:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
     for (int i = 0; i < 7; i++) tetrominoBag[i] = i;
  800072a:	4c19      	ldr	r4, [pc, #100]	@ (8000790 <shuffleBag+0x68>)
-// Trộn mảng theo chuỗi XOR đơn giản dựa trên tick đếm
+    // random set up
 	static uint32_t seed = 0;
-	if (seed == 0) seed = osKernelGetTickCount(); // hoặc osKernelGetTickCount()
+	if (seed == 0) seed = osKernelGetTickCount(); // seed random based on tick
  800072c:	4d19      	ldr	r5, [pc, #100]	@ (8000794 <shuffleBag+0x6c>)
     for (int i = 0; i < 7; i++) tetrominoBag[i] = i;
  800072e:	2300      	movs	r3, #0
@@ -731,7 +731,7 @@ static void shuffleBag(void) {
  8000744:	7163      	strb	r3, [r4, #5]
  8000746:	2306      	movs	r3, #6
  8000748:	71a3      	strb	r3, [r4, #6]
-	if (seed == 0) seed = osKernelGetTickCount(); // hoặc osKernelGetTickCount()
+	if (seed == 0) seed = osKernelGetTickCount(); // seed random based on tick
  800074a:	682b      	ldr	r3, [r5, #0]
  800074c:	b913      	cbnz	r3, 8000754 <shuffleBag+0x2c>
  800074e:	f009 f8b1 	bl	80098b4 <osKernelGetTickCount>
@@ -784,7 +784,7 @@ static void shuffleBag(void) {
  800079c:	20000851 	.word	0x20000851
 
 080007a0 <TetrisEngine_GetScore>:
-uint32_t TetrisEngine_GetScore(void) { return score; }
+}
  80007a0:	4b01      	ldr	r3, [pc, #4]	@ (80007a8 <TetrisEngine_GetScore+0x8>)
  80007a2:	6818      	ldr	r0, [r3, #0]
  80007a4:	4770      	bx	lr
@@ -792,7 +792,7 @@ uint32_t TetrisEngine_GetScore(void) { return score; }
  80007a8:	2000085c 	.word	0x2000085c
 
 080007ac <TetrisEngine_IsGameOver>:
-bool TetrisEngine_IsGameOver(void) { return gameOver; }
+}
  80007ac:	4b01      	ldr	r3, [pc, #4]	@ (80007b4 <TetrisEngine_IsGameOver+0x8>)
  80007ae:	7818      	ldrb	r0, [r3, #0]
  80007b0:	4770      	bx	lr
@@ -800,20 +800,21 @@ bool TetrisEngine_IsGameOver(void) { return gameOver; }
  80007b4:	2000085a 	.word	0x2000085a
 
 080007b8 <TetrisEngine_IsGameOngoing>:
-bool TetrisEngine_IsGameOngoing(void) { return gameStarted && !gameOver; }
+	return gameStarted && !gameOver;
  80007b8:	4b04      	ldr	r3, [pc, #16]	@ (80007cc <TetrisEngine_IsGameOngoing+0x14>)
  80007ba:	7818      	ldrb	r0, [r3, #0]
  80007bc:	b118      	cbz	r0, 80007c6 <TetrisEngine_IsGameOngoing+0xe>
  80007be:	4b04      	ldr	r3, [pc, #16]	@ (80007d0 <TetrisEngine_IsGameOngoing+0x18>)
  80007c0:	7818      	ldrb	r0, [r3, #0]
  80007c2:	f080 0001 	eor.w	r0, r0, #1
+}
  80007c6:	f000 0001 	and.w	r0, r0, #1
  80007ca:	4770      	bx	lr
  80007cc:	20000859 	.word	0x20000859
  80007d0:	2000085a 	.word	0x2000085a
 
 080007d4 <TetrisEngine_GetNextIndex>:
-int8_t TetrisEngine_GetNextIndex(void) { return nextTetrominoIdx; }
+}
  80007d4:	4b01      	ldr	r3, [pc, #4]	@ (80007dc <TetrisEngine_GetNextIndex+0x8>)
  80007d6:	f993 0000 	ldrsb.w	r0, [r3]
  80007da:	4770      	bx	lr
@@ -1363,9 +1364,10 @@ const uint8_t (*TetrisEngine_GetArena(void))[A_WIDTH] {
  8000be0:	20000448 	.word	0x20000448
 
 08000be4 <TetrisEngine_GetLevel>:
-}
 
+// -------------------------------------------
 
+// level and difficulty setting
 uint32_t TetrisEngine_GetLevel(void){
 	int level = 1 + (score / POINT_PER_LEVEL);
  8000be4:	4b05      	ldr	r3, [pc, #20]	@ (8000bfc <TetrisEngine_GetLevel+0x18>)
@@ -1411,7 +1413,7 @@ uint32_t TetrisEngine_GetDropDelay(void){
 
 08000c1c <TetrisEngine_SaveState>:
 
-// Placeholder for Save/Load and Leaderboard
+//  Save/Load game State for continue feature
 void TetrisEngine_SaveState(void) {
 	memcpy(savedState.arena, arena, sizeof(arena));
  8000c1c:	4b1b      	ldr	r3, [pc, #108]	@ (8000c8c <TetrisEngine_SaveState+0x70>)
@@ -1455,7 +1457,7 @@ void TetrisEngine_SaveState(void) {
  8000c66:	7812      	ldrb	r2, [r2, #0]
  8000c68:	f880 232d 	strb.w	r2, [r0, #813]	@ 0x32d
 
-	// Tạo CRC đơn giản (XOR tất cả giá trị làm ví dụ)
+	// valid save flag
 	uint32_t* p = (uint32_t*)&savedState;
 	uint32_t crc = 0;
 	for (int i = 0; i < sizeof(TetrisSaveState) / sizeof(uint32_t) - 1; i++) {
@@ -1522,7 +1524,7 @@ bool TetrisEngine_HasValidSave(void) {
  8000cca:	b178      	cbz	r0, 8000cec <TetrisEngine_HasValidSave+0x28>
  8000ccc:	4909      	ldr	r1, [pc, #36]	@ (8000cf4 <TetrisEngine_HasValidSave+0x30>)
 
-	// Kiểm tra CRC
+	// crc check
 	uint32_t* p = (uint32_t*)&savedState;
 	uint32_t crc = 0;
 	for (int i = 0; i < sizeof(TetrisSaveState) / sizeof(uint32_t) - 1; i++) {
@@ -1611,7 +1613,7 @@ void TetrisEngine_LoadState(void) {
 
 08000d78 <EnterName_SetNameFlag>:
 
-// Enter Name Feature
+// Enter Name Feature Engine
 void EnterName_SetNameFlag(bool flag){
 	nameFlag = flag;
  8000d78:	4b01      	ldr	r3, [pc, #4]	@ (8000d80 <EnterName_SetNameFlag+0x8>)
@@ -15152,17 +15154,17 @@ void GameScreenView::tearDownScreen()
  80060b0:	4770      	bx	lr
 
 080060b2 <_ZN14GameScreenView10resumeGameEv>:
-    menuOverlay.invalidate();  // Vẽ lại overlay
+    menuOverlay.invalidate();
 }
 
 void GameScreenView::resumeGame()
 {
-    isPaused = false;  // ✅ Bỏ pause
+    isPaused = false;
  80060b2:	f500 4280 	add.w	r2, r0, #16384	@ 0x4000
  80060b6:	2300      	movs	r3, #0
  80060b8:	f882 32f8 	strb.w	r3, [r2, #760]	@ 0x2f8
-    menuOverlay.setVisible(false);  // Ẩn overlay
-    menuOverlay.invalidate();       // Cập nhật giao diện
+    menuOverlay.setVisible(false);
+    menuOverlay.invalidate();
  80060bc:	f600 702c 	addw	r0, r0, #3884	@ 0xf2c
  80060c0:	f880 3025 	strb.w	r3, [r0, #37]	@ 0x25
  80060c4:	f00c bfb2 	b.w	801302c <_ZNK8touchgfx8Drawable10invalidateEv>
@@ -15201,16 +15203,16 @@ void GameScreenView::destroyHowToPlay()
  80060f2:	4604      	mov	r4, r0
 	TetrisEngine_SaveState();
  80060f4:	f7fa fd92 	bl	8000c1c <TetrisEngine_SaveState>
-    isPaused = true;  // Pause game logic
+    isPaused = true;
  80060f8:	f504 4280 	add.w	r2, r4, #16384	@ 0x4000
  80060fc:	2301      	movs	r3, #1
  80060fe:	f882 32f8 	strb.w	r3, [r2, #760]	@ 0x2f8
-    menuOverlay.invalidate();  // Vẽ lại overlay
+    menuOverlay.invalidate();
  8006102:	f604 702c 	addw	r0, r4, #3884	@ 0xf2c
  8006106:	f884 3f51 	strb.w	r3, [r4, #3921]	@ 0xf51
 }
  800610a:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
-    menuOverlay.invalidate();  // Vẽ lại overlay
+    menuOverlay.invalidate();
  800610e:	f00c bf8d 	b.w	801302c <_ZNK8touchgfx8Drawable10invalidateEv>
 	...
 
@@ -15601,14 +15603,14 @@ GameScreenView::GameScreenView()
 	gameOverScreen.invalidate();
  800647a:	4630      	mov	r0, r6
  800647c:	f00c fdd6 	bl	801302c <_ZNK8touchgfx8Drawable10invalidateEv>
-	updateArenaOnScreen();       // Cập nhật lại game state hiển thị
+	updateArenaOnScreen();
  8006480:	4620      	mov	r0, r4
  8006482:	f7ff ff0f 	bl	80062a4 <_ZN14GameScreenView19updateArenaOnScreenEv>
-	updateNextTetromino();       // Vẽ lại khối tiếp theo
+	updateNextTetromino();
  8006486:	4620      	mov	r0, r4
 }
  8006488:	e8bd 40f8 	ldmia.w	sp!, {r3, r4, r5, r6, r7, lr}
-	updateNextTetromino();       // Vẽ lại khối tiếp theo
+	updateNextTetromino();
  800648c:	f7ff bf81 	b.w	8006392 <_ZN14GameScreenView19updateNextTetrominoEv>
  8006490:	20000004 	.word	0x20000004
 

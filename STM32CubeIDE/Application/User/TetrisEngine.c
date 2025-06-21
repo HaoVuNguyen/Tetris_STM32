@@ -46,6 +46,7 @@ static void checkLines(void);
 static bool moveDown(void);
 static void shuffleBag(void);
 
+// Engine Init and Button control
 void TetrisEngine_Init(void) {
     memset(arena, 0, sizeof(arena));
     score = 0;
@@ -100,20 +101,21 @@ void TetrisEngine_OnButtonPress(TetrisButton button) {
 }
 
 
+// display buffer
 const uint8_t (*TetrisEngine_GetArena(void))[A_WIDTH] {
     static uint8_t displayBuffer[A_HEIGHT][A_WIDTH];
 
-    // ✅ Clear buffer trước (đảm bảo không giữ lại dữ liệu frame cũ)
+    // clear buffer before process
     memset(displayBuffer, 0, sizeof(displayBuffer));
 
-    // ✅ Copy khối đã gắn vào arena
+    // copy freezed blocks to buffer
     for (int y = 0; y < A_HEIGHT; y++) {
         for (int x = 0; x < A_WIDTH; x++) {
             displayBuffer[y][x] = arena[y][x];
         }
     }
 
-    // ✅ Vẽ thêm khối đang rơi
+    // process falling block into buffer
     for (int y = 0; y < T_HEIGHT; y++) {
         for (int x = 0; x < T_WIDTH; x++) {
             int idx = rotate(x, y, currRotation);
@@ -129,7 +131,7 @@ const uint8_t (*TetrisEngine_GetArena(void))[A_WIDTH] {
     return displayBuffer;
 }
 
-
+// setter - getter for game state
 int8_t TetrisEngine_GetCurrentTetrominoIdx(void) {
     return currTetrominoIdx;
 }
@@ -143,16 +145,29 @@ int8_t TetrisEngine_GetCurrentY(void) {
     return currY;
 }
 
-uint32_t TetrisEngine_GetScore(void) { return score; }
-bool TetrisEngine_IsGameOver(void) { return gameOver; }
-bool TetrisEngine_IsGameOngoing(void) { return gameStarted && !gameOver; }
-int8_t TetrisEngine_GetNextIndex(void) { return nextTetrominoIdx; }
+uint32_t TetrisEngine_GetScore(void) {
+	return score;
+}
+
+bool TetrisEngine_IsGameOver(void) {
+	return gameOver;
+}
+
+bool TetrisEngine_IsGameOngoing(void) {
+	return gameStarted && !gameOver;
+}
+
+int8_t TetrisEngine_GetNextIndex(void) {
+	return nextTetrominoIdx;
+}
+
+//  --------GAME MECHANIC FUNCTION---------
 
 static void shuffleBag(void) {
     for (int i = 0; i < 7; i++) tetrominoBag[i] = i;
-// Trộn mảng theo chuỗi XOR đơn giản dựa trên tick đếm
+    // random set up
 	static uint32_t seed = 0;
-	if (seed == 0) seed = osKernelGetTickCount(); // hoặc osKernelGetTickCount()
+	if (seed == 0) seed = osKernelGetTickCount(); // seed random based on tick
 
 	for (int i = 6; i > 0; i--) {
 		// Tạo chỉ số j từ seed pseudo-random: hạn chế dùng % trực tiếp
@@ -249,7 +264,9 @@ static void checkLines(void) {
     if (cleared > 0) score += 100 * cleared;
 }
 
+// -------------------------------------------
 
+// level and difficulty setting
 uint32_t TetrisEngine_GetLevel(void){
 	int level = 1 + (score / POINT_PER_LEVEL);
 	if (level > MAX_LEVEL)
@@ -275,7 +292,7 @@ uint32_t TetrisEngine_GetDropDelay(void){
 	}
 }
 
-// Placeholder for Save/Load and Leaderboard
+//  Save/Load game State for continue feature
 void TetrisEngine_SaveState(void) {
 	memcpy(savedState.arena, arena, sizeof(arena));
 	savedState.currTetrominoIdx = currTetrominoIdx;
@@ -287,7 +304,7 @@ void TetrisEngine_SaveState(void) {
 	savedState.gameOver = gameOver;
 	savedState.gameStarted = gameStarted;
 
-	// Tạo CRC đơn giản (XOR tất cả giá trị làm ví dụ)
+	// valid save flag
 	uint32_t* p = (uint32_t*)&savedState;
 	uint32_t crc = 0;
 	for (int i = 0; i < sizeof(TetrisSaveState) / sizeof(uint32_t) - 1; i++) {
@@ -318,7 +335,7 @@ void TetrisEngine_SetShouldLoad(bool shouldLoad)
 bool TetrisEngine_HasValidSave(void) {
 	if (!hasSavedState) return false;
 
-	// Kiểm tra CRC
+	// crc check
 	uint32_t* p = (uint32_t*)&savedState;
 	uint32_t crc = 0;
 	for (int i = 0; i < sizeof(TetrisSaveState) / sizeof(uint32_t) - 1; i++) {
@@ -328,7 +345,7 @@ bool TetrisEngine_HasValidSave(void) {
 	return crc == savedState.crc;
 }
 
-// Enter Name Feature
+// Enter Name Feature Engine
 void EnterName_SetNameFlag(bool flag){
 	nameFlag = flag;
 }
@@ -351,4 +368,3 @@ bool isNameComplete(void) {
     return true;
 }
 
-\

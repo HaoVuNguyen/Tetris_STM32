@@ -43,11 +43,6 @@ void GameOverScreen::destroyEnterNameOverlay()
 	enterName.invalidate();
 }
 
-//void GameOverScreen::drawEnterNameOverlay()
-//{
-//	enterName.invalidate();
-//}
-
 void GameOverScreen::showNewHighScoreText()
 {
 	textHighScore.setVisible(true);

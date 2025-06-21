@@ -12,8 +12,6 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
 
-    void updateLeaderboard();
-
 protected:
     Unicode::UnicodeChar nameBuffer[5][4];
     Unicode::UnicodeChar scoreBuffer[5][7];

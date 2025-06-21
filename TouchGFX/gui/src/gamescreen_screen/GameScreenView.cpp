@@ -7,6 +7,7 @@
 
 extern "C"{
 #include "main.h"
+// change path accordingly
 #include "F:\Documents\TouchGFXProject\Tetris\STM32CubeIDE\Application\User\TetrisEngine.h"
 #include "F:\Documents\TouchGFXProject\Tetris\STM32CubeIDE\Application\User\Leaderboard.h"
 #include "cmsis_os.h"
@@ -21,7 +22,7 @@ GameScreenView::GameScreenView()
 uint8_t lastArena[20][10] = {0};
 
 void updateArenaOnScreen();
-//void updateFallingTetromino();
+
 void updateNextTetromino();
 
 void GameScreenView::setupScreen()
@@ -46,9 +47,6 @@ void GameScreenView::setupScreen()
                lastArena[y][x] = 0;
            }
     }
-
-    //srand((unsigned int)osKernelGetTickCount());
-
 
     if (loadSave){
     	TetrisEngine_LoadState();
@@ -153,10 +151,6 @@ void GameScreenView::handleTickEvent(){
 								EnterName_SetNameFlag(true);
 								uint8_t pos = Leaderboard_AddScoreWithName(runScore, playerName);
 
-
-								//const LeaderboardEntry* entries = Leaderboard_GetEntries();
-
-								// Leaderboard_Save();
 								gameOverScreen.updatePlayerInfo(entries[pos].score, entries[pos].name);
 
 								gameOverScreen.destroyEnterNameOverlay();
@@ -254,15 +248,12 @@ void GameScreenView::updateNextTetromino()
 
 void GameScreenView::updateScoreAndLevel()
 {
-    // Lấy điểm và level từ engine
     int score = TetrisEngine_GetScore();
     int level = TetrisEngine_GetLevel();
 
-    // Chuyển sang Unicode string
     Unicode::snprintf(scoreBuffer, sizeof(scoreBuffer), "%d", score);
     Unicode::snprintf(levelBuffer, sizeof(levelBuffer), "%d", level);
 
-    // Gán vào wildcard
     scoreArea.setWildcard(scoreBuffer);
     scoreArea.invalidate();
 
@@ -274,16 +265,16 @@ void GameScreenView::updateScoreAndLevel()
 void GameScreenView::buttonMenuClicked()
 {
 	TetrisEngine_SaveState();
-    isPaused = true;  // Pause game logic
+    isPaused = true;
     menuOverlay.setVisible(true);
-    menuOverlay.invalidate();  // Vẽ lại overlay
+    menuOverlay.invalidate();
 }
 
 void GameScreenView::resumeGame()
 {
-    isPaused = false;  // ✅ Bỏ pause
-    menuOverlay.setVisible(false);  // Ẩn overlay
-    menuOverlay.invalidate();       // Cập nhật giao diện
+    isPaused = false;
+    menuOverlay.setVisible(false);
+    menuOverlay.invalidate();
 }
 
 void GameScreenView::restartGame()
@@ -299,13 +290,10 @@ void GameScreenView::restartGame()
 	}
 	gameOverScreen.setVisible(false);
 
-//	gameOverScreen.textHighScore.setVisible(false);
-//	gameOverScreen.enterName.setVisible(false);
-
 	gameOverScreen.invalidate();
 
-	updateArenaOnScreen();       // Cập nhật lại game state hiển thị
-	updateNextTetromino();       // Vẽ lại khối tiếp theo
+	updateArenaOnScreen();
+	updateNextTetromino();
 }
 
 void GameScreenView::howToPlay()

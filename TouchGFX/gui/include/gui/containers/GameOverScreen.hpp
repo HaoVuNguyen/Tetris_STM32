@@ -16,7 +16,7 @@ public:
     void setScore(int score);
 
     void showEnterNameOverlay();
-//    void drawEnterNameOverlay();
+
     void showNewHighScoreText();
     void destroyEnterNameOverlay();
 

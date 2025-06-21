@@ -2,6 +2,7 @@
 #include <gui/common/FrontendApplication.hpp>
 
 extern "C"{
+//change path accordingly
 #include "F:\Documents\TouchGFXProject\Tetris\STM32CubeIDE\Application\User\TetrisEngine.h"
 #include "F:\Documents\TouchGFXProject\Tetris\STM32CubeIDE\Application\User\Leaderboard.h"
 };

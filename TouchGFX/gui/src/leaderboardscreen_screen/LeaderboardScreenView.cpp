@@ -1,7 +1,7 @@
 #include <gui/leaderboardscreen_screen/LeaderboardScreenView.hpp>
 
 extern "C"{
-#include "F:\Documents\TouchGFXProject\Tetris\STM32CubeIDE\Application\User\Leaderboard.h"
+#include "F:\Documents\TouchGFXProject\Tetris\STM32CubeIDE\Application\User\Leaderboard.h" //change path accordingly
 };
 LeaderboardScreenView::LeaderboardScreenView()
 {
@@ -12,7 +12,10 @@ void LeaderboardScreenView::setupScreen()
 {
 	LeaderboardScreenViewBase::setupScreen();
 
-	//updateLeaderboard();
+	/*
+	 * use different buffer for different entry to avoid buffer overlap -> cannot load
+	 */
+
 	for (int i = 0; i < LEADERBOARD_SIZE; i++){
 		switch (i){
 		 case 0:
@@ -63,38 +66,3 @@ void LeaderboardScreenView::tearDownScreen()
 }
 
 
-//void LeaderboardScreenView::updateLeaderboard()
-//{
-//	//const LeaderboardEntry* entries = Leaderboard_GetEntries();
-//
-//	Unicode::strncpy(nameBuffer, entries[0].name, 4);
-//	highScore1.setWildcard1(nameBuffer);
-//	Unicode::snprintf(scoreBuffer, sizeof(scoreBuffer), "%d", entries[0].score);
-//	highScore1.setWildcard2(scoreBuffer);
-//	highScore1.invalidate();
-//
-//	Unicode::strncpy(nameBuffer, entries[1].name, 4);
-//	highScore2.setWildcard1(nameBuffer);
-//	Unicode::snprintf(scoreBuffer, sizeof(scoreBuffer), "%d", entries[1].score);
-//	highScore2.setWildcard2(scoreBuffer);
-//	highScore2.invalidate();
-//
-//	Unicode::strncpy(nameBuffer, entries[2].name, 4);
-//	highScore3.setWildcard1(nameBuffer);
-//	Unicode::snprintf(scoreBuffer, sizeof(scoreBuffer), "%d", entries[2].score);
-//	highScore3.setWildcard2(scoreBuffer);
-//	highScore3.invalidate();
-//
-//	Unicode::strncpy(nameBuffer, entries[3].name, 4);
-//	highScore4.setWildcard1(nameBuffer);
-//	Unicode::snprintf(scoreBuffer, sizeof(scoreBuffer), "%d", entries[3].score);
-//	highScore4.setWildcard2(scoreBuffer);
-//	highScore4.invalidate();
-//
-//	Unicode::strncpy(nameBuffer, entries[4].name, 4);
-//	highScore5.setWildcard1(nameBuffer);
-//	Unicode::snprintf(scoreBuffer, sizeof(scoreBuffer), "%d", entries[4].score);
-//	highScore5.setWildcard2(scoreBuffer);
-//	highScore5.invalidate();
-//
-//}
