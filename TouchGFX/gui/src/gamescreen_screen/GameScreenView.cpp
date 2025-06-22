@@ -133,11 +133,11 @@ void GameScreenView::handleTickEvent(){
 					gameOverScreen.updateNameChar(currentCharIndex, playerName[currentCharIndex]);
 					break;
 				case BUTTON_DOWN:
-//					playerName[currentCharIndex] = '_';
-//					gameOverScreen.updateNameChar(currentCharIndex, playerName[currentCharIndex]);
-//					if (currentCharIndex > 0)
-//						currentCharIndex--;
-//					gameOverScreen.updateNameChar(currentCharIndex, playerName[currentCharIndex]);
+					playerName[currentCharIndex] = '_';
+					gameOverScreen.updateNameChar(currentCharIndex, playerName[currentCharIndex]);
+					if (currentCharIndex > 0)
+						currentCharIndex--;
+					gameOverScreen.updateNameChar(currentCharIndex, playerName[currentCharIndex]);
 					break;
 				case BUTTON_ROTATE:
 
@@ -191,13 +191,13 @@ void GameScreenView::updateArenaOnScreen()
             		int id = current - 1;
 
                     switch (id) {
-                        case 0: blocks[y][x].setColor(tetrominoI.getBox(0).getColor()); break;
-                        case 1: blocks[y][x].setColor(tetrominoO.getBox(0).getColor()); break;
-                        case 2: blocks[y][x].setColor(tetrominoS.getBox(0).getColor()); break;
-                        case 3: blocks[y][x].setColor(tetrominoZ.getBox(0).getColor()); break;
-                        case 4: blocks[y][x].setColor(tetrominoT.getBox(0).getColor()); break;
-                        case 5: blocks[y][x].setColor(tetrominoJ.getBox(0).getColor()); break;
-                        case 6: blocks[y][x].setColor(tetrominoL.getBox(0).getColor()); break;
+                        case 0: blocks[y][x].setColor(nextI.getBox(0).getColor()); break;
+                        case 1: blocks[y][x].setColor(nextO.getBox(0).getColor()); break;
+                        case 2: blocks[y][x].setColor(nextS.getBox(0).getColor()); break;
+                        case 3: blocks[y][x].setColor(nextZ.getBox(0).getColor()); break;
+                        case 4: blocks[y][x].setColor(nextT.getBox(0).getColor()); break;
+                        case 5: blocks[y][x].setColor(nextJ.getBox(0).getColor()); break;
+                        case 6: blocks[y][x].setColor(nextL.getBox(0).getColor()); break;
                     }
                     blocks[y][x].setVisible(true);
                     blocks[y][x].invalidate();

@@ -35,18 +35,9 @@ public:
     void resumeGame();
     void restartGame();
 
-    uint8_t lastArena[20][10];
 
 protected:
-    TetrominoI tetrominoI;
-	TetrominoJ tetrominoJ;
-	TetrominoL tetrominoL;
-	TetrominoO tetrominoO;
-	TetrominoS tetrominoS;
-	TetrominoT tetrominoT;
-	TetrominoZ tetrominoZ;
-
-	Container* currentTetrominoContainer = nullptr;
+    uint8_t lastArena[20][10];
 	touchgfx::BoxWithBorder blocks[20][10]; // the game arena
 
 	Unicode::UnicodeChar scoreBuffer[7]; // ví dụ: "12345\0"
