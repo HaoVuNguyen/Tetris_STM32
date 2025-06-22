@@ -18,10 +18,12 @@ public:
     void showEnterNameOverlay();
 
     void showNewHighScoreText();
+    void destroyNewHighScoreText();
     void destroyEnterNameOverlay();
 
     void updateNameChar(uint8_t idx, char c);
     void updatePlayerInfo(uint32_t score, char* name);
+    void destroyPlayerInfo();
 
     void buttonRestartClicked();
     touchgfx::Callback<GameScreenView> restartCallback;

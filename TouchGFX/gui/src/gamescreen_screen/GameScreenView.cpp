@@ -288,6 +288,8 @@ void GameScreenView::restartGame()
 	for (int i = 2; i>=0 ; i--){
 		gameOverScreen.updateNameChar(i, playerName[i]);
 	}
+	gameOverScreen.destroyPlayerInfo();
+	gameOverScreen.destroyNewHighScoreText();
 	gameOverScreen.setVisible(false);
 
 	gameOverScreen.invalidate();

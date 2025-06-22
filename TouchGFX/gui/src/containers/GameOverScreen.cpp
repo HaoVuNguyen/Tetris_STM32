@@ -30,6 +30,10 @@ void GameOverScreen::updatePlayerInfo(uint32_t score, char* name)
 	playerInfo.invalidate();
 }
 
+void GameOverScreen::destroyPlayerInfo()
+{
+	playerInfo.setVisible(false);
+}
 // Process Enter Name container
 
 void GameOverScreen::showEnterNameOverlay()
@@ -46,6 +50,11 @@ void GameOverScreen::destroyEnterNameOverlay()
 void GameOverScreen::showNewHighScoreText()
 {
 	textHighScore.setVisible(true);
+}
+
+void GameOverScreen::destroyNewHighScoreText()
+{
+	textHighScore.setVisible(false);
 }
 
 void GameOverScreen::updateNameChar(uint8_t idx, char c)

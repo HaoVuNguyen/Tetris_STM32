@@ -11,7 +11,7 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:459:18:bool touchgfx::Callback<dest_type, void, void, void>::isValid() const [with dest_type = GameScreenView]	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:449:18:void touchgfx::Callback<dest_type, void, void, void>::execute() [with dest_type = GameScreenView]	4	static
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/GameOverScreen.cpp:58:6:virtual void GameOverScreen::buttonRestartClicked()	8	static
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/GameOverScreen.cpp:67:6:virtual void GameOverScreen::buttonRestartClicked()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:touchgfx::Callback<GameScreenView>::~Callback()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:virtual touchgfx::Callback<GameScreenView>::~Callback()	8	static
 ../../TouchGFX/gui/include/gui/containers/GameOverScreen.hpp:12:13:GameOverScreen::~GameOverScreen()	8	static
@@ -20,8 +20,10 @@ F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/GameOverScreen.c
 F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/GameOverScreen.cpp:3:1:GameOverScreen::GameOverScreen()	8	static
 F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/GameOverScreen.cpp:15:6:void GameOverScreen::setScore(int)	16	static
 F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/GameOverScreen.cpp:21:6:void GameOverScreen::updatePlayerInfo(uint32_t, char*)	16	static
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/GameOverScreen.cpp:35:6:void GameOverScreen::showEnterNameOverlay()	0	static
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/GameOverScreen.cpp:40:6:void GameOverScreen::destroyEnterNameOverlay()	0	static
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/GameOverScreen.cpp:46:6:void GameOverScreen::showNewHighScoreText()	0	static
-F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/GameOverScreen.cpp:51:6:void GameOverScreen::updateNameChar(uint8_t, char)	16	static
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/GameOverScreen.cpp:33:6:void GameOverScreen::destroyPlayerInfo()	0	static
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/GameOverScreen.cpp:39:6:void GameOverScreen::showEnterNameOverlay()	0	static
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/GameOverScreen.cpp:44:6:void GameOverScreen::destroyEnterNameOverlay()	0	static
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/GameOverScreen.cpp:50:6:void GameOverScreen::showNewHighScoreText()	0	static
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/GameOverScreen.cpp:55:6:void GameOverScreen::destroyNewHighScoreText()	0	static
+F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/GameOverScreen.cpp:60:6:void GameOverScreen::updateNameChar(uint8_t, char)	16	static
 F:/Documents/TouchGFXProject/Tetris/TouchGFX/gui/src/containers/GameOverScreen.cpp:8:6:virtual void GameOverScreen::initialize()	8	static
